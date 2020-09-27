@@ -3,8 +3,8 @@
 // PLAYER VARIABLES
 
 
-var mp3snd 	= "../Title Here_files/song.mp3";	// MP3 FILE
-var oggsnd 	= "../Title Here_files/song.ogg";	// OGG FILE
+var mp3snd 	= "./Title Here_files/song.mp3";	// MP3 FILE
+var oggsnd 	= "./Title Here_files/song.ogg";	// OGG FILE
 
 
 var loopsong	= "no"			// LOOP MUSIC | yes | no |
