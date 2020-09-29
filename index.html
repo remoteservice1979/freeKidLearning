@@ -1,5 +1,7 @@
 
 
+
+
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +12,18 @@
 	<link href="./Title Here_files/css_slider.css" type="text/css" rel="stylesheet" media="all"><!-- banner slider -->
 	<link rel="stylesheet" href="./Title Here_files/style.css" type="text/css" media="all"><!-- Style-CSS -->
 	<link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- Font-Awesome-Icons-CSS -->
-	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-       
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="./audio/Audio-HTML5.js"></script>
+	<link rel="stylesheet" href="./whatup/floating-wpp.css">
+    <script type="text/javascript" src="./whatup/floating-wpp.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
 	<!-- //Custom-Files -->
 
+	 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 	<!-- Web-Fonts -->
 	<link href="./Title Here_files/css" rel="stylesheet">
 	<!-- //Web-Fonts -->
@@ -24,28 +32,88 @@
 			$("#audio").hide();
 			$("#audio").play();
 		});
-	</script>
-	
 
+		$(function () {
+			$('#myButton').floatingWhatsApp({
+					phone: '91-8447396480',
+					popupMessage: 'Hello, how can we help you?',
+					message: "I'm Like to learn Coding",
+					showPopup: true,
+					showOnIE: false,
+					headerTitle: 'Welcome!',
+					// headerColor: 'crimson',
+					// backgroundColor: 'crimson',
+					buttonImage: '<img src="./whatup/whatsapp.jpg" />'
+			});
+	});
+	</script>
+
+<webview src="https://web.whatsapp.com" partition="persist:whatsapp" allowtransparency="on"></webview>
 
 </head>
 
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	var provider = new firebase.auth.GoogleAuthProvider();
+
+	function googleSignin() {
+	   firebase.auth()
+
+	   .signInWithPopup(provider).then(function(result) {
+	      var token = result.credential.accessToken;
+	      var user = result.user;
+
+	      console.log(token)
+	      console.log(user)
+	   }).catch(function(error) {
+	      var errorCode = error.code;
+	      var errorMessage = error.message;
+
+	      console.log(error.code)
+	      console.log(error.message)
+	   });
+	}
+
+	function googleSignout() {
+	   firebase.auth().signOut()
+
+	   .then(function() {
+	      console.log('Signout Succesfull')
+	   }, function(error) {
+	      console.log('Signout Failed')
+	   });
+	}
+  var firebaseConfig = {
+    apiKey: "AIzaSyB47QmF0dKwxSimw45nbcdgmCJ0k28KxGk",
+    authDomain: "kids-c4393.firebaseapp.com",
+    databaseURL: "https://kids-c4393.firebaseio.com",
+    projectId: "kids-c4393",
+    storageBucket: "kids-c4393.appspot.com",
+    messagingSenderId: "787211511535",
+    appId: "1:787211511535:web:87d992442ac152772a1d1a",
+    measurementId: "G-X9NXN0MQ2D"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
+</script>
 <body>
 	<div id="page" class="page"><!-- header -->
-		
-		
-		  
+  <div id="myButton"></div>
+
+
 <header>
 	<div class="top-head container">
-	 
+
 		<div class="ml-auto text-right right-p">
 			<ul>
 				<li class="mr-3 editContent">
 					<span class="fa fa-clock-o"></span> Sun : 10:00 to 12:00</li>
 				<li class="editContent">
 					<span class="fa fa-envelope-open"></span> <a href="mailto:aftechiphone@gmail.com">aftechiphone@gmail.com</a> </li>
-				<li class="editContent">
-				<div class="elfsight-app-492deb4d-8c95-4377-aa1b-2c0af9d8ca37"></div> </li>
+					<button onclick = "googleSignin()">Google Signin</button>
+          <button onclick = "googleSignout()">Google Signout</button>
 			</ul>
 		</div>
 	</div>
@@ -413,7 +481,7 @@
 						<div class="testi-info-text">
 							<h4 class="editContent"> Its good </h4>
 							<p class="editContent">
-								<span class="fa fa-quote-left"></span> 
+								<span class="fa fa-quote-left"></span>
 								We are also learning along with kids :-)
 								<span class="fa ml-2 fa-quote-right"></span>
 							</p>
@@ -427,7 +495,7 @@
 						<div class="testi-info-text">
 							<h4 class="editContent">Technique i have ever seen</h4>
 							<p class="editContent">
-								<span class="fa fa-quote-left"></span> 
+								<span class="fa fa-quote-left"></span>
 								<span class="fa ml-2 fa-quote-right"></span>
 							</p>
 						</div>
