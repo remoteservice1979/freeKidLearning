@@ -18,14 +18,13 @@
 
 .floating-wpp .floating-wpp-button img,
 .floating-wpp .floating-wpp-button svg {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-51%, -50%, 0);
-    /* border-radius: 114%;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .floating-wpp:hover {
