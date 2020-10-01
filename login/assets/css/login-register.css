@@ -9,6 +9,11 @@
  
 /*  Shake animation  */
 
+body {
+ background-image: url("https://github.com/remoteservice1979/freeKidLearning/login/assets/image/background-image.jpg");
+ background-color: #cccccc;
+}
+
 @charset "UTF-8";
 
 .animated {
