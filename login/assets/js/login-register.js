@@ -9,7 +9,9 @@ function showRegisterForm(){
     });
     $('.error').removeClass('alert alert-danger').html('');
 
+
 }
+
 function showLoginForm(){
     $('#loginModal .registerBox').fadeOut('fast',function(){
         $('.loginBox').fadeIn('fast');
@@ -20,6 +22,29 @@ function showLoginForm(){
         $('.modal-title').html('Login with');
     });
      $('.error').removeClass('alert alert-danger').html('');
+     $.ajax({
+         type: "GET",
+         datatype:"json",
+         url: "https://run.mocky.io/v3/b5c8de2f-facf-4d4c-9ad7-605adb0b92a2",
+         data:({
+             email : $('#email').val(),
+             password: $('#password').val()
+         }),
+         success: function(result)
+         {
+        //   window.localStorage.setItem("userDetail", result);
+             $('#data').empty()
+             if(result) // you should do your checking here
+             {
+               result.forEach( function( item ) {
+                   $('#data').append('<li style="color:white;font-size:160%">' + item.username + '</li>')
+                });
+
+               //just to show that it went through
+             }
+
+         }
+     });
 }
 
 function openLoginModal(){
@@ -38,35 +63,28 @@ function openRegisterModal(){
 }
 
 function loginAjax(){
-    /*   Remove this comments when moving to server
-    $.post( "/login", function( data ) {
-            if(data == 1){
-                window.location.replace("/home");
-            } else {
-                 shakeModal();
-            }
-        });
-    */
     event.preventDefault();
    $.ajax({
        type: "GET",
        datatype:"json",
-       url: "https://run.mocky.io/v3/3c33d063-99f1-4cf7-ad31-d5f11652f15c",
+       url: "https://run.mocky.io/v3/b5c8de2f-facf-4d4c-9ad7-605adb0b92a2",
        data:({
            email : $('#email').val(),
            password: $('#password').val()
        }),
        success: function(result)
        {
+      //   window.localStorage.setItem("userDetail", result);
            if(result) // you should do your checking here
            {
              var email = $('#email').val();
              var password = $('#password').val();
              let data = result.filter(user => user.useremail === email && user.password === password );
              if (data.length > 0 ){
-                window.location = 'http://www.google.com/';
+                window.location = 'https://remoteservice1979.github.io/freeKidLearning/Study/Material/index.html';
              }else{
-                window.location = 'http://www.yahoo.com/';
+
+               alert('Wrong info');
              }
 
                //just to show that it went through
