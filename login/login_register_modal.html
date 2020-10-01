@@ -6,9 +6,6 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-
-
-
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
 
 	<link href="assets/css/login-register.css" rel="stylesheet" />
@@ -81,9 +78,7 @@
                     </div>
                     <div class="modal-footer">
                         <div class="forgot login-footer">
-                            <span>Looking to
-                                 <a href="javascript: showRegisterForm();">create an account</a>
-                            ?</span>
+
                         </div>
                         <div class="forgot register-footer" style="display:none">
                              <span>Already have an account?</span>
@@ -94,6 +89,11 @@
 		      </div>
 		  </div>
     </div>
+    <div class="container">
+    <span style="font-color: white;"> Registered UserName's </span>
+    <ul class="list-group" id="data">
+    </ul>
+  </div>
 <script type="text/javascript">
     $(document).ready(function(){
         openLoginModal();
