@@ -14,7 +14,7 @@ let availableQuesions = [];
 let questions = [];
 
 fetch(
-    'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
+    'https://run.mocky.io/v3/5440a17d-ff0c-4f02-a196-1c39c38365a2'
 )
     .then((res) => {
         return res.json();
