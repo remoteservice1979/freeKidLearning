@@ -14,7 +14,7 @@ let availableQuesions = [];
 let questions = [];
 
 fetch(
-    'https://run.mocky.io/v3/a9446601-e5f0-42dd-aa21-5b56fca498b9'
+    'https://run.mocky.io/v3/a72152cf-169f-43d7-b666-bd19de52a0e6'
 )
     .then((res) => {
         return res.json();
