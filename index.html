@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="./Title Here_files/bootstrap.css"><!-- Bootstrap-CSS -->
 	<link href="./Title Here_files/css_slider.css" type="text/css" rel="stylesheet" media="all"><!-- banner slider -->
 	<link rel="stylesheet" href="./Title Here_files/style.css" type="text/css" media="all"><!-- Style-CSS -->
-	<link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/shady/skin.css" />
 	<link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- Font-Awesome-Icons-CSS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="./audio/Audio-HTML5.js"></script>
@@ -27,12 +26,76 @@
 	<link href="./Title Here_files/css" rel="stylesheet">
 	<!-- //Web-Fonts -->
 		<script type="text/javascript">
+
+		var ALERT_TITLE = "Oops!";
+var ALERT_BUTTON_TEXT = "Ok";
+
+if(document.getElementById) {
+    window.alert = function(txt) {
+        createCustomAlert(txt);
+    }
+}
+
+function createCustomAlert(txt) {
+    d = document;
+
+    if(d.getElementById("modalContainer")) return;
+
+    mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+    mObj.id = "modalContainer";
+    mObj.style.height = d.documentElement.scrollHeight + "px";
+
+    alertObj = mObj.appendChild(d.createElement("div"));
+    alertObj.id = "alertBox";
+    if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+    alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+    alertObj.style.visiblity="visible";
+
+    h1 = alertObj.appendChild(d.createElement("h1"));
+    h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+    msg = alertObj.appendChild(d.createElement("p"));
+    //msg.appendChild(d.createTextNode(txt));
+    msg.innerHTML = txt;
+
+    btn = alertObj.appendChild(d.createElement("a"));
+    btn.id = "closeBtn";
+    btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+    btn.href = "#";
+    btn.focus();
+    btn.onclick = function() { removeCustomAlert();return false; }
+
+    alertObj.style.display = "block";
+
+}
+
+function removeCustomAlert() {
+    document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+function ful(){
+alert('Alert this pages');
+}
+		function checkSelection() {
+			 var score = localStorage.getItem('mostRecentScore');
+			 if (score < 30 ) {
+				 alert("Please Clear Selection Quiz ..")
+        return false;
+			 }else {
+				 alert("Great You are going to win World soon")
+				   return true;
+			 }
+		}
 		$(document).ready(function() {
 			$("#audio").hide();
 			$("#audio").play();
+
 		});
 
+			// $("#Started").click(function(){
+			// 	alert(' hi')
+			// }
 		$(function () {
+
 			$('#myButton').floatingWhatsApp({
 					phone: '91-8447396480',
 					popupMessage: 'Hello, how can we help you?',
@@ -100,7 +163,7 @@
 <body>
 	<div id="page" class="page"><!-- header -->
   <div id="myButton"></div>
-		
+
 
 <header>
 	<div class="top-head container">
@@ -109,13 +172,8 @@
 			<ul>
 				<li class="mr-3 editContent">
 					<span class="fa fa-clock-o"></span> Sun : 10:00 to 12:00</li>
-				<li class="mr-3 editContent">
-					<span class="fa fa-count">Visitors</span>
-				        <a href="https://www.hitwebcounter.com" target="_blank">
-                                         <img src="https://hitwebcounter.com/counter/counter.php?page=7681359&style=0001&nbdigits=5&type=page&initCount=0" title="Total Website Hits" Alt="Web Hits"   border="0" /></a>        
-                                 </li>
 				<li class="editContent">
-					<span class="fa fa-envelope-open"></span> <a href="mailto:aftechiphone@gmail.com">anil.joshi@codingstar.org.in</a> </li>
+					<span class="fa fa-envelope-open"></span> <a href="mailto:aftechiphone@gmail.com">aftechiphone@gmail.com</a> </li>
 				</ul>
 		</div>
 	</div>
@@ -159,7 +217,8 @@
 									<div class="w3ls_banner_txt">
 										<h3 class="b-w3ltxt text-capitalize mt-md-4 editContent">Education Courses.</h3>
 										<h4 class="b-w3ltxt text-capitalize mt-md-2 editContent">Study For Better Future</h4>
-										<p class="w3ls_pvt-title my-3 editContent">We especially enrolled Kids of IT & S/w Professional .. We have Passion to prove our self ..Why are Best </p>
+										<p class="w3ls_pvt-title my-3 editContent">We especially enrolled Kids of IT & S/w Professional .. Its Passion to prove to our self ..Why we are Best..
+										We Welcome all IT Professional for open discussion, Regard any Technology Stack. Specially Backend ,Front-end and Cloud..  </p>
 										<a href="https://remoteservice1979.github.io/freeKidLearning/index.html#about" class="btn btn-banner my-3">Read More</a>
 										<a href="https://remoteservice1979.github.io/freeKidLearning/Quiz/QuizAppMaster/index.html" class="btn btn-banner my-3">Selection Quiz</a>
 									</div>
@@ -172,9 +231,6 @@
 										<h4 class="b-w3ltxt text-capitalize mt-md-2 editContent">Study For Better Coding Future</h4>
 										<p class="w3ls_pvt-title my-3 editContent">Indian kids need a small pushup for techincal mind, We taken this responsibility .</p>
 										<a href="https://remoteservice1979.github.io/freeKidLearning/index.html#about" class="btn btn-banner my-3">Read More</a>
-										<a href="https://remoteservice1979.github.io/freeKidLearning/index.html#about" class="btn btn-banner my-3">Read More</a>
-										<a href="https://remoteservice1979.github.io/freeKidLearning/Quiz/QuizAppMaster/index.html" class="btn btn-banner my-3">Section Quiz</a>
-
 									</div>
 								</div>
 							</li>
@@ -203,11 +259,11 @@
 					<div class="banner-form-w3 ml-lg-5">
 						<div class="padding editContent">
 							<!-- banner form -->
-							<form	action="https://formspree.io/xdopkdva"	method="POST">
+							<form	action="https://formspree.io/xdopkdva" onsubmit="return checkSelection()"	method="POST">
 								<h5 class="mb-3 editContent">Register and Join in our Free Group</h5>
 								<div class="form-style-w3ls">
 									<div class="editContent">
-										<input placeholder="Student Name" name="name" type="text" required="">
+										<input onclick="checkSelection();"placeholder="Student Name" name="name" type="text" required="">
 									</div>
 									<div class="editContent">
 										<input placeholder="Your Email Id" name="email" type="email" required="">
@@ -224,11 +280,14 @@
 										  <option value="1">clas 8th</option>
 										  <option value="1">classs 9th</option>
 										  <option value="1">class 10th</option>
+											<option value="1">Working Professional</option>
+											<option value="1">B-tech</option>
+											<option value="1">IIT</option>
 										  <option value="1">Other</option>
 										</select>
 									</div>
 									<input placeholder="Password" name="password" type="password" required="">
-									 <button class="btn"> Get Started</button>
+									 <button  id="Started"  class="btn"> Get Started</button>
 									<span class="editContent">By registering, you agree to our <a href="https://chat.whatsapp.com/FtKLvDprBpVHCTmdFSZynD" class="editContent">Terms &amp; Conditions.</a></span>
 								</div>
 							 </form>
@@ -487,19 +546,14 @@
 							<h4 class="editContent"> Its good </h4>
 							<p class="editContent">
 								<span class="fa fa-quote-left"></span>
-								We are also learning along with kids
+								We are also learning along with kids :-)
 								<span class="fa ml-2 fa-quote-right"></span>
 							</p>
 						</div>
 						<div class="testi-pos">
-							<img src="./Title Here_files/public.jpg" alt="" class="img-fluid rounded-circle mb-3">
-							<h4 class="editContent"> Share Your Commet's</h4>
+							<img src="./Title Here_files/ts1.jpg" alt="" class="img-fluid rounded-circle mb-3">
+							<h4 class="editContent"> Diraj kumar </h4>
 						</div>
-						<!-- begin htmlcommentbox.com -->
- <div id="HCB_comment_box" style="background-color: white;"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
- <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/shady/skin.css" />
- <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=(""+window.location).replace(/'/g,"%27") || hcb_user.PAGE, h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%240AZD2uQKdE.%2FVMQ.EuI3B0"+"&opts=17276&num=20");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); hcb_user.submit="";/*-->*/ </script>
-<!-- end htmlcommentbox.com -->
 					</div>
 					<div class="col-md-6 mb-5 editContent">
 						<div class="testi-info-text">
@@ -598,10 +652,10 @@
 					<p class="editContent">.</p>
 				</div>
 				<ul class="social_section_1info">
-					<li class="facebook editContent"><a href="https://www.facebook.com/anil.joshi.9847867"><span class="fa fa-facebook"></span></a></li>
+					<li class="facebook editContent"><a href="https://remoteservice1979.github.io/freeKidLearning/index.html#"><span class="fa fa-facebook"></span></a></li>
 					<li class="twitter editContent"><a href="https://remoteservice1979.github.io/freeKidLearning/index.html#"><span class="fa fa-twitter"></span></a></li>
 					<li class="google editContent"><a href="https://remoteservice1979.github.io/freeKidLearning/index.html#"><span class="fa fa-google-plus"></span></a></li>
-					<li class="linkedin editContent"><a href="https://www.linkedin.com/in/anil-kumar-64639764/"><span class="fa fa-linkedin"></span></a></li>
+					<li class="linkedin editContent"><a href="https://remoteservice1979.github.io/freeKidLearning/index.html#"><span class="fa fa-linkedin"></span></a></li>
 					<li class="pinterest editContent"><a href="https://remoteservice1979.github.io/freeKidLearning/index.html#"><span class="fa fa-pinterest"></span></a></li>
 					<li class="vimeo editContent"><a href="https://remoteservice1979.github.io/freeKidLearning/index.html#"><span class="fa fa-vimeo"></span></a></li>
 				</ul>
