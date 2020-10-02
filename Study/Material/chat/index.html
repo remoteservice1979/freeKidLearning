@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>vchat - a simple video chat app</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn53
+84xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.6.0/js/okta-sign-in.min.js" type="text/javas
+cript"></script>
+<link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.6.0/css/okta-sign-in.min.css" type="text/css"
+rel="stylesheet"/>
+<link href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.6.0/css/okta-theme.css" type="text/css" rel="
+stylesheet"/>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<!-- snip -->
+
+<footer>
+<p>Let Work together <a href="https://twitter.com/rdegges">@rdegges</a>
+
+</footer>
+
+<script>
+var okta = new OktaSignIn({
+  baseUrl: "http://codingstar.org.in",
+  clientId: "0oa5ylzsdcmVqYgwR5d5",
+  authParams: {
+    issuer: "http://codingstar.org.in/oauth2/default",
+    responseType: ["token", "00ykqfbt57rYP2n0z2d9ysb7TmwfeUfmLVWCcbaon1"],
+    display: "page"
+  }
+});
+
+// Render the login form.
+function showLogin() {
+  okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
+    alert("Couldn't render the login form, something horrible must have happened. Please refresh the page.");
+  });
+}
+
+// Handle the user's login and what happens next.
+function handleLogin() {
+  // If the user is logging in for the first time...
+  if (okta.token.hasTokensInUrl()) {
+    okta.token.parseTokensFromUrl(
+      function success(res) {
+        // Save the tokens for later use, e.g. if the page gets refreshed:
+        okta.tokenManager.add("accessToken", res[0]);
+        okta.tokenManager.add("idToken", res[1]);
+
+        console.log("user just logged in");
+      }, function error(err) {
+        alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
+      }
+    );
+  } else {
+    okta.session.get(function(res) {
+
+      // If the user is logged in...
+      if (res.status === "ACTIVE") {
+
+        console.log("user is already logged in")
+        return;
+      }
+
+      // If we get here, the user is not logged in.
+      console.log("user not logged in");
+      showLogin();
+    });
+  }
+}
+
+handleLogin();
+</script>
+</html>
