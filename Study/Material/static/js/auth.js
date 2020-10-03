@@ -1,14 +1,15 @@
- var OKTA_SETTINGS = {
-   baseUrl: "https://dev-457161.okta.com",
-   clientId: "0oa635bfZhhSjdsPM5d5",
-   authParams: {
-       issuer: "https://dev-457161.okta.com/oauth2/default",
-     responseType: ["token", "00sE5ktioDx54TXR2Vb48HAyEZK9p0EVSFR8Up7_uv"],
-       display: "page"
-   },
-   logo: '../static/cynorix.png'
- }
-var okta = new OktaSignIn({ baseUrl: OKTA_SETTINGS.baseUrl, clientId: OKTA_SETTINGS.clientId, authParams: { issuer: OKTA_SETTINGS.issuer, responseType: ["token", "00sE5ktioDx54TXR2Vb48HAyEZK9p0EVSFR8Up7_uv"], display: "page" } });
+var oktaConfig = {
+  baseUrl: "https://dev-457161.okta.com",
+  clientId: "0oa635bfZhhSjdsPM5d5",
+  authParams: {
+      issuer: "https://dev-457161.okta.com/oauth2/default",
+    responseType: ["token", "00sE5ktioDx54TXR2Vb48HAyEZK9p0EVSFR8Up7_uv"],
+      display: "page"
+  },
+  logo: '../static/cynorix.png'
+}
+// https://dev-457161.okta.com/oauth2/default/.well-known/oauth-authorization-server
+var okta = new OktaSignIn(oktaConfig);
 function showLogin() {
     okta.renderEl(
         { el: "#okta-login-container" },
