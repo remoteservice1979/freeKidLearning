@@ -11,7 +11,7 @@ var oktaConfig = {
 // https://dev-457161.okta.com/oauth2/default/.well-known/oauth-authorization-server
 var okta = new OktaSignIn(oktaConfig);
 
-// Render the login form.
+// Render the login form anil
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
     alert("Couldn't render the login form, something horrible must have happened. Please refresh the page.");
