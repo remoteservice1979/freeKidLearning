@@ -1,17 +1,17 @@
 var oktaConfig = {
-  baseUrl: "http://codingstar.org.in",
-  clientId: "0oa5z107LAm3nQLvC5d5",
+  baseUrl: "https://dev-457161.okta.com",
+  clientId: "0oa635bfZhhSjdsPM5d5",
   authParams: {
-      issuer: "http://codingstar.org.in/oauth2/default",
-    responseType: ["token", "00ElZ6uMP92I3rdzZ9Z1qC4mNd03bTdwna9YB49Vwo"],
+      issuer: "https://dev-457161.okta.com/oauth2/default",
+    responseType: ["token", "00sE5ktioDx54TXR2Vb48HAyEZK9p0EVSFR8Up7_uv"],
       display: "page"
   },
-  logo: '/static/cynorix.png'
+  logo: '../static/cynorix.png'
 }
-
+// https://dev-457161.okta.com/oauth2/default/.well-known/oauth-authorization-server
 var okta = new OktaSignIn(oktaConfig);
 
-// Render the login form.
+// Render the login form anil
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
     alert("Couldn't render the login form, something horrible must have happened. Please refresh the page.");
