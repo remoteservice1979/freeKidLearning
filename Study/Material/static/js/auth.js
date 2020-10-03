@@ -69,7 +69,7 @@ function enableVideo() {
 }
 function loadSimpleWebRTC() {
     var script = document.createElement("script");
-    script.src = ""/static/js/latest-v3.js"";
+    script.src = "/static/js/latest-v3.js";
     document.head.appendChild(script);
     script.onload = function () {
         var webrtc = new SimpleWebRTC({ localVideoEl: "selfVideo", remoteVideosEl: "", autoRequestMedia: true, debug: false, detectSpeakingEvents: true, autoAdjustMic: false });
