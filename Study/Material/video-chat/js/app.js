@@ -90,7 +90,7 @@ function myjsapp(peerClient) {
 
         $('#user-name').keypress(function (event) {
             if (13 == event.which) {
-                var username = $('#user-name').val().trim();
+                var username = 'Code'+'*' + $('#user-name').val().trim();
                 $('#getUserNameModal').modal('hide')
                 if(cookie.get('username') != username)
                     startPeerClient(username)
@@ -103,7 +103,7 @@ function myjsapp(peerClient) {
                 startPeerClient(username)
         })
 
-        
+
         $('.accept-call').click(function (event) {
             // End established call
             peerClient.acceptIncomingCall();
@@ -141,7 +141,7 @@ function myjsapp(peerClient) {
             var fromTxt = isSent ? 'You' : id
             var msg = $('<li><b>' + fromTxt + ': </b></li>').append('<span>' + message + '</span')
             hist.append(msg)
-                .scrollTop(hist[0].scrollHeight);            
+                .scrollTop(hist[0].scrollHeight);
         }
     }
 
@@ -160,7 +160,7 @@ function myjsapp(peerClient) {
         $('#getUserNameModal').modal('show')
     }
 
-    EventListeners();        
+    EventListeners();
 
     return {
         setPeerId : function (id) {
@@ -201,7 +201,7 @@ function myjsapp(peerClient) {
                 } else {
                     panel.addClass('min')
                     panelBody.addClass("hide")
-                }                
+                }
             })
 
             message.keypress(function(event) {
@@ -285,7 +285,7 @@ function myjsapp(peerClient) {
             }
         },
         showError : function (msg) {
-            
+
         },
         updateOnlieUsers : function (users) {
             var list = $('.onlinepeers')
@@ -296,8 +296,12 @@ function myjsapp(peerClient) {
                 return
             }
             for (var i = 0; i < users.length; i++) {
+                 var len =   users[i].indexOf("Code");
+                 if(len !== -1)
+                 {
                 var usr = '<li class="peeruser">'+ users[i] + '</li>'
                 list.append(usr);
+                }
             }
         }
     };
