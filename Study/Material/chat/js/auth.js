@@ -6,7 +6,7 @@ var oktaConfig = {
     responseType: ["token", "00sE5ktioDx54TXR2Vb48HAyEZK9p0EVSFR8Up7_uv"],
       display: "page"
   },
-  logo: '/static/cynorix.png'
+  logo: '../static/cynorix.png'
 }
 // https://dev-457161.okta.com/oauth2/default/.well-known/oauth-authorization-server
 var okta = new OktaSignIn(oktaConfig);
