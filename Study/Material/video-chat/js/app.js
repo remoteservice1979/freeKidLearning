@@ -90,7 +90,7 @@ function myjsapp(peerClient) {
 
         $('#user-name').keypress(function (event) {
             if (13 == event.which) {
-                var username = 'Code'+ $('#user-name').val().trim();
+                var username = 'code'+ $('#user-name').val().trim();
                 $('#getUserNameModal').modal('hide')
                 if(cookie.get('username') != username)
                     startPeerClient(username)
@@ -98,7 +98,7 @@ function myjsapp(peerClient) {
         })
 
         $('.username-done').click(function (event) {
-            var username ='Code' + $('#user-name').val().trim();
+            var username = 'code'+ $('#user-name').val().trim();
             if(cookie.get('username') != username)
                 startPeerClient(username)
         })
@@ -179,16 +179,17 @@ function myjsapp(peerClient) {
             var message = $('<input type="text" class="form-control" placeholder="Enter Message">')
             var sendBtn = $('<button type="button" class="btn btn-outline-primary">Send</button>')
             var callButton = $('<a class="portfolio-link">');
+
             var videoCall = $('<i class="fa fa-video-camera fa-2x call-icon" aria-hidden="true"></i>');
             var audioCall = $('<i class="fa fa-phone fa-2x call-icon" aria-hidden="true"></i></a>');
-
-            callButton.append(audioCall).append(videoCall);
+            var closeButton = $('<i class="fa fa-close fa-2x call-icon" aria-hidden="true"></i></a>');
+            callButton.append(audioCall).append(videoCall).append(closeButton);
 
             chatHistory[toPeerId] = history
             chatPanel[toPeerId] = panel
 
             $('.panel-heading', panel).append(title).append(callButton)
-            $('.panel-body', panel).append('<span class="text-primary">You can now start chatting</span>').append(history)
+            $('.panel-body', panel).append('<span class="text-primary">You can now start Study</span>').append(history)
             $('.form-group', panel).append(message).append(sendBtn)
 
             $('.chat-container > div').append(panel);
@@ -296,12 +297,10 @@ function myjsapp(peerClient) {
                 return
             }
             for (var i = 0; i < users.length; i++) {
-                 var len =   users[i].indexOf("Code");
-                 if(len !== -1)
-                 {
+              if(users[i].indexOf('code') !== -1) {
                 var usr = '<li class="peeruser">'+ users[i] + '</li>'
                 list.append(usr);
-                }
+              }
             }
         }
     };
