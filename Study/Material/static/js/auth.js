@@ -2,7 +2,7 @@ var oktaConfig = {
   baseUrl: "https://dev-457161.okta.com",
   clientId: "aus637uk1ZGj660Y55d5",
   authParams: {
-      issuer: "https://dev-457161.okta.com/oauth2/default",
+      issuer: "https://dev-457161.okta.com/oauth2/aus637uk1ZGj660Y55d5",
     responseType: ["token", "00O76RXZkUg_5aU_vKhukZQ84hhnBKub0Igp1xakxZ"],
       display: "page"
   },
