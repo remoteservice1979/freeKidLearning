@@ -63,7 +63,7 @@ function handleLogin() {
       console.log("you are not logged in")
       if (hasQueryString()) {
         document.getElementById("login").style.display = "block";
-        enableVideo();
+       // enableVideo();
       } else {
         showLogin();
       }
