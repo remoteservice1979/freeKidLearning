@@ -1,9 +1,9 @@
 var oktaConfig = {
   baseUrl: "https://dev-457161.okta.com",
-  clientId: "0oa635bfZhhSjdsPM5d5",
+  clientId: "aus637uk1ZGj660Y55d5",
   authParams: {
       issuer: "https://dev-457161.okta.com/oauth2/default",
-    responseType: ["token", "00sE5ktioDx54TXR2Vb48HAyEZK9p0EVSFR8Up7_uv"],
+    responseType: ["token", "00O76RXZkUg_5aU_vKhukZQ84hhnBKub0Igp1xakxZ"],
       display: "page"
   },
   logo: '../static/cynorix.png'
