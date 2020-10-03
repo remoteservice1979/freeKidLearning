@@ -82,30 +82,9 @@
 </script>
 <body>
 	<div id="page" class="page"><!-- header -->
-		<div id="google_translate_element"></div>
+		
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-  }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-
-<!-- Flag click handler -->
-<script type="text/javascript">
-    $('.translation-links a').click(function() {
-      var lang = $(this).data('lang');
-      var $frame = $('.goog-te-menu-frame:first');
-      if (!$frame.size()) {
-        alert("Error: Could not find Google translate frame.");
-        return false;
-      }
-      $frame.contents().find('.goog-te-menu2-item span.text:contains('+lang+')').get(0).click();
-      return false;
-    });
-</script>
-
-
+// 'ar,xx,yy'
 <header>
 	<div class="top-head container">
 		<div class="ct-topbar">
@@ -113,11 +92,10 @@
 			<ul class="list-unstyled list-inline ct-topbar__list">
 			  <li class="ct-language">Language <i class="fa fa-arrow-down"></i>
 				<ul class="list-unstyled ct-language__dropdown">
-				  <li><a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"></a></li>
-				  <li><a href="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"></a></li>
-				  <li><a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr"><img src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"></a></li>
-				  <li><a href="#googtrans(en|zh-CN)" class="lang-es lang-select" data-lang="zh-CN"><img src="https://www.solodev.com/assets/google-translate/flag-china.png" alt="CHINA"></a></li>
-				  <li><a href="#googtrans(en|ja)" class="lang-es lang-select" data-lang="ja"><img src="https://www.solodev.com/assets/google-translate/flag-japan.png" alt="JAPAN"></a></li>
+					 <li><a href="#googtrans(en|ta)" class="lang-es lang-select" data-lang="ta"><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F2d%2FTamilnadu_Flag.png&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ATamilnadu_Flag.png&tbnid=VkHhay4ORxjfPM&vet=12ahUKEwjqqpSK4JjsAhXyBrcAHXWLDeMQMygDegUIARC-AQ..i&docid=otg9nf9kZZoEuM&w=1402&h=747&q=flag%20of%20tamil%20nadu&ved=2ahUKEwjqqpSK4JjsAhXyBrcAHXWLDeMQMygDegUIARC-AQ" alt="tamil"></a> Tamil</li>
+				       <li><a href="#googtrans(en|te)" class="lang-es lang-select" data-lang="ar"><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.thehindu.com%2Fnews%2Fnational%2Fkarnataka%2Farticle22991434.ece%2FALTERNATES%2FLANDSCAPE_1200%2F09BGFLAG&imgrefurl=https%3A%2F%2Fwww.thehindu.com%2Fnews%2Fnational%2Fkarnataka%2Fstate-flag-unveiled%2Farticle22986994.ece&tbnid=FC5faxL_iBTQrM&vet=12ahUKEwimgfHN4JjsAhUfFbcAHW1eDXAQMygBegUIARDCAQ..i&docid=NQCsYRZujjgANM&w=1200&h=749&q=flag%20of%20karnataka&ved=2ahUKEwimgfHN4JjsAhUfFbcAHW1eDXAQMygBegUIARDCAQ" alt="Telgu"> Telgu</a></li>
+					 <li><a href="#googtrans(en|kn)" class="lang-es lang-select" data-lang="xx"><img src="https://i.redd.it/yfa4jpvi2z851.png" alt="JAPAN">Karnada</a></li>
+					
 				</ul>
 			  </li>
 			</ul>
