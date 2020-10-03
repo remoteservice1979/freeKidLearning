@@ -90,7 +90,7 @@ function myjsapp(peerClient) {
 
         $('#user-name').keypress(function (event) {
             if (13 == event.which) {
-                var username = 'Code'+'*' + $('#user-name').val().trim();
+                var username = 'Code'+ $('#user-name').val().trim();
                 $('#getUserNameModal').modal('hide')
                 if(cookie.get('username') != username)
                     startPeerClient(username)
@@ -98,7 +98,7 @@ function myjsapp(peerClient) {
         })
 
         $('.username-done').click(function (event) {
-            var username = $('#user-name').val().trim();
+            var username ='Code' + $('#user-name').val().trim();
             if(cookie.get('username') != username)
                 startPeerClient(username)
         })
