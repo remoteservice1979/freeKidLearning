@@ -18,50 +18,30 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="highscores.css" />
      <script type="text/javascript">
-    $('document').ready(function () {
-    $('input[type=file]').on('change', function () {
-      var $files = $(this).get(0).files;
+   function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
 
-      if ($files.length) {
-        // Reject big files
-        if ($files[0].size > $(this).data('max-size') * 1024) {
-          console.log('Please select a smaller file');
-          return false;
-        }
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=8d5867a9512390fb5e5dc97839aa36f6",
+  "method": "POST",
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
 
-        // Begin file upload
-        console.log('Uploading file to Imgur..');
 
-        // Replace ctrlq with your own API key
-        var apiUrl = 'https://api.imgbb.com/1/upload';
-        var apiKey = 'b8cb58d5481b136d13cfbeacbf97ea2a';
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
 
-        var settings = {
-          async: false,
-          crossDomain: true,
-          processData: false,
-          contentType: false,
-          type: 'POST',
-          url: apiUrl,
-          headers: {
-            Authorization: 'Client-ID ' + apiKey,
-            Accept: 'application/json',
-          },
-          mimeType: 'multipart/form-data',
-        };
 
-        var formData = new FormData();
-        formData.append('image', $files[0]);
-        settings.data = formData;
-
-        // Response contains stringified JSON
-        // Image URL available at response.data.link
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-        });
-      }
-    });
-  });
+});
+}
 
     </script>
     <!-- Fine Uploader Thumbnails template w/ customization
@@ -163,8 +143,11 @@
         <h1 id="finalScore">High Scores</h1>
         <ul id="highScoresList"></ul>
         <a class="btn" href="/">Go Home</a>
+          <input type="file" id="input_img" onchange="fileChange()" accept="image/*">
       </div>
     </div>
+    
+    
 
     <!-- Your code to create an instance of Fine Uploader and bind to the DOM/template
     ====================================================================== -->
