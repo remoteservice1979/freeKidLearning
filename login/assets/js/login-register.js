@@ -25,7 +25,7 @@ function showLoginForm(){
      $.ajax({
          type: "GET",
          datatype:"json",
-         url: "https://run.mocky.io/v3/680d99b6-1755-4bd4-962a-f411c7a192f9",
+         url: "https://run.mocky.io/v3/bf79a590-b73e-4e22-851d-090777336054",
          data:({
              email : $('#email').val(),
              password: $('#password').val()
@@ -67,7 +67,7 @@ function loginAjax(){
    $.ajax({
        type: "GET",
        datatype:"json",
-       url: "https://run.mocky.io/v3/680d99b6-1755-4bd4-962a-f411c7a192f9",
+       url: "https://run.mocky.io/v3/bf79a590-b73e-4e22-851d-090777336054",
        data:({
            email : $('#email').val(),
            password: $('#password').val()
