@@ -126,19 +126,8 @@
       </div>
     </div>
     <div align="center"> 
-        <form method="post" action="" enctype="multipart/form-data"
-                id="myform"> 
-   
-            <div > 
-                <input type="file" id="file" name="file" /> 
-                <input type="button" class="button" value="Upload"
-                        id="but_upload"> 
-            </div> 
-        </form> 
-        
-         <form method="post" enctype="multipart/form-data">
-        <input type="file" name="files[]" multiple>
-        <input type="submit" value="Upload File" name="submit">
+        <div> new one </div>
+          <input type="file" id="input_img" onchange="fileChange()" accept="image/*">
     </form>
     </div>     
     
@@ -170,31 +159,32 @@
     
      <script type="text/javascript"> 
       
-        const url = 'https://api.imgbb.com/1/upload?expiration=600&key=7f8911cebcf9abbddf64afe13a79a976';
-const form = document.querySelector('form');
+        
+         function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=7f8911cebcf9abbddf64afe13a79a976",
+  "method": "POST",
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
 
-    const files = document.querySelector('[type=file]').files;
-    const formData = new FormData();
 
-    for (let i = 0; i < files.length; i++) {
-        let file = files[i];
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
 
-        formData.append('files[]', file);
-    }
 
-    fetch(url, {
-        method: 'POST',
-        body: formData
-    }).then(response => {
-        return response.text();
-    }).then(data => {
-        console.log(data);
-    });
 });
-    </script> 
+}
+
 </body>
 </html>
 
