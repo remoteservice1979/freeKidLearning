@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="highscores.css" />
      <script type="text/javascript">
-   async function fileChange(inp){
+   async function fileChange(event){
        let formData = new FormData();           
-    formData.append("file", this.files[0]);
+    formData.append("file", event.files[0]);
        
     await fetch('https://api.imgbb.com/1/upload?key=8d5867a9512390fb5e5dc97839aa36f6', {method: "POST", body: formData});    
     alert('success');
