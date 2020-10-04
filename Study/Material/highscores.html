@@ -17,16 +17,32 @@
     <script src="highscores.js"></script>
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="highscores.css" />
-     <script type="text/javascript">
-   async function fileChange(event){
-       let formData = new FormData();           
-    formData.append("file", event.files[0]);
        
-    await fetch('https://api.imgbb.com/1/upload?key=8d5867a9512390fb5e5dc97839aa36f6', {method: "POST", body: formData});    
-    alert('success');
+    <script type="text/javascript"> 
+        $(document).ready(function() { 
+            $("#but_upload").click(function() { 
+                var fd = new FormData(); 
+                var files = $('#file')[0].files[0]; 
+                fd.append('file', files); 
        
-   }
-    </script>
+                $.ajax({ 
+                    url: 'https://api.imgbb.com/1/upload?key=8d5867a9512390fb5e5dc97839aa36f6', 
+                    type: 'post', 
+                    data: fd, 
+                    contentType: false, 
+                    processData: false, 
+                    success: function(response){ 
+                        if(response != 0){ 
+                           alert('file uploaded'); 
+                        } 
+                        else{ 
+                            alert('file not uploaded'); 
+                        } 
+                    }, 
+                }); 
+            }); 
+        }); 
+    </script> 
     <!-- Fine Uploader Thumbnails template w/ customization
     ====================================================================== -->
     <script type="text/template" id="qq-template-manual-trigger">
@@ -128,9 +144,20 @@
         <h1 id="finalScore">High Scores</h1>
         <ul id="highScoresList"></ul>
         <a class="btn" href="/">Go Home</a>
-          <input type="file" id="input_img" onchange="fileChange()" accept="image/*">
+       
       </div>
     </div>
+    <div align="center"> 
+        <form method="post" action="" enctype="multipart/form-data"
+                id="myform"> 
+   
+            <div > 
+                <input type="file" id="file" name="file" /> 
+                <input type="button" class="button" value="Upload"
+                        id="but_upload"> 
+            </div> 
+        </form> 
+    </div>     
     
     
 
