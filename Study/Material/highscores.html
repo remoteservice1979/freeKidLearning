@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="highscores.css" />
     <script>
-    function init(){
-      document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
-    }
-
-    function handleFileSelect(event){
-      const reader = new FileReader()
-      reader.onload = handleFileLoad;
-      reader.readAsText(event.target.files[0])
-    }
-
-    function handleFileLoad(event){
-      console.log(event);
-      document.getElementById('fileContent').textContent = event.target.result;
+    function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0; i < files.length; i++) {           
+            var file = files[i];
+            var imageType = /image.*/;     
+            if (!file.type.match(imageType)) {
+                continue;
+            }           
+            var img=document.getElementById("thumbnil");            
+            img.file = file;    
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { 
+                return function(e) { 
+                    aImg.src = e.target.result; 
+                }; 
+            })(img);
+            reader.readAsDataURL(file);
+        }    
     }
     </script>
   </head>
@@ -33,8 +38,9 @@
       </div>
       <div> Student Detail's </div>
       <ul id="studentList"></ul>
-       <input class="btn" id="fileInput" type="file" name="file" />
-    <pre id="fileContent"></pre>
+     <input type="file" accept="image/*"  onchange="showMyImage(this)" />
+     <br/>
+    <img id="thumbnil" style="width:20%; margin-top:10px;"  src="" alt="image"/>
     </div>
     <script src="highscores.js"></script>
   </body>
