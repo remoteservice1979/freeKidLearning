@@ -80,6 +80,7 @@ function loginAjax(){
              var email = $('#email').val();
              var password = $('#password').val();
              let data = result.filter(user => user.useremail === email && user.password === password );
+              localStorage.setItem('currentEmp',JSON.stringify(data));
              if (data.length > 0 ){
                 window.location = 'https://remoteservice1979.github.io/freeKidLearning/Study/Material/index.html';
              }else{
