@@ -17,6 +17,32 @@
     <script src="highscores.js"></script>
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="highscores.css" />
+      <script type="text/javascript">
+    function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
+
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=8d5867a9512390fb5e5dc97839aa36f6",
+  "method": "POST",
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
+
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
+
+
+});
+}
+</script>
     <!-- Fine Uploader Thumbnails template w/ customization
     ====================================================================== -->
     <script type="text/template" id="qq-template-manual-trigger">
@@ -74,7 +100,7 @@
 
             <dialog class="qq-prompt-dialog-selector">
                 <div class="qq-dialog-message-selector"></div>
-                <input type="text">
+                <input type="text" id="input_img" onchange="fileChange()" accept="image/*">
                 <div class="qq-dialog-buttons">
                     <button type="button" class="qq-cancel-button-selector">Cancel</button>
                     <button type="button" class="qq-ok-button-selector">Ok</button>
