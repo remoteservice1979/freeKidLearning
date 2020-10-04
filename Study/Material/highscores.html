@@ -24,9 +24,9 @@
                 var fd = new FormData(); 
                 var files = $('#file')[0].files[0]; 
                 fd.append('file', files); 
-       
+      
                 $.ajax({ 
-                    url: 'https://api.imgbb.com/1/upload/8d5867a9512390fb5e5dc97839aa36f6', 
+                    url: 'https://api.imgbb.com/1/upload?expiration=600&key8d5867a9512390fb5e5dc97839aa36f6', 
                     type: 'post', 
                     data: fd, 
                     contentType: false, 
