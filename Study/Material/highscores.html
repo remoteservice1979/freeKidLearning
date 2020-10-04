@@ -18,33 +18,7 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="highscores.css" />
        
-    <script type="text/javascript"> 
-      
-        const url = 'https://api.imgbb.com/1/upload?expiration=600&key=7f8911cebcf9abbddf64afe13a79a976';
-const form = document.querySelector('form');
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const files = document.querySelector('[type=file]').files;
-    const formData = new FormData();
-
-    for (let i = 0; i < files.length; i++) {
-        let file = files[i];
-
-        formData.append('files[]', file);
-    }
-
-    fetch(url, {
-        method: 'POST',
-        body: formData
-    }).then(response => {
-        return response.text();
-    }).then(data => {
-        console.log(data);
-    });
-});
-    </script> 
+   
     <!-- Fine Uploader Thumbnails template w/ customization
     ====================================================================== -->
     <script type="text/template" id="qq-template-manual-trigger">
@@ -177,7 +151,7 @@ form.addEventListener('submit', e => {
             element: document.getElementById('fine-uploader-manual-trigger'),
             template: 'qq-template-manual-trigger',
             request: {
-                endpoint: '/server/uploads'
+                endpoint: 'https://api.imgbb.com/1/upload?expiration=600&key=7f8911cebcf9abbddf64afe13a79a976'
             },
             thumbnails: {
                 placeholders: {
@@ -193,6 +167,34 @@ form.addEventListener('submit', e => {
             manualUploader.uploadStoredFiles();
         });
     </script>
+    
+     <script type="text/javascript"> 
+      
+        const url = 'https://api.imgbb.com/1/upload?expiration=600&key=7f8911cebcf9abbddf64afe13a79a976';
+const form = document.querySelector('form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const files = document.querySelector('[type=file]').files;
+    const formData = new FormData();
+
+    for (let i = 0; i < files.length; i++) {
+        let file = files[i];
+
+        formData.append('files[]', file);
+    }
+
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    }).then(response => {
+        return response.text();
+    }).then(data => {
+        console.log(data);
+    });
+});
+    </script> 
 </body>
 </html>
 
