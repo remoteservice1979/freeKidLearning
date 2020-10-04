@@ -19,29 +19,31 @@
     <link rel="stylesheet" href="highscores.css" />
        
     <script type="text/javascript"> 
-        $(document).ready(function() { 
-            $("#but_upload").click(function() { 
-                var fd = new FormData(); 
-                var files = $('#file')[0].files[0]; 
-                fd.append('file', files); 
       
-                $.ajax({ 
-                    url: 'https://api.imgbb.com/1/upload?expiration=600&key=7f8911cebcf9abbddf64afe13a79a976', 
-                    type: 'post', 
-                    data: fd, 
-                    contentType: false, 
-                    processData: false, 
-                    success: function(response){ 
-                        if(response != 0){ 
-                           alert('file uploaded'); 
-                        } 
-                        else{ 
-                            alert('file not uploaded'); 
-                        } 
-                    }, 
-                }); 
-            }); 
-        }); 
+        const url = 'https://api.imgbb.com/1/upload?expiration=600&key=7f8911cebcf9abbddf64afe13a79a976';
+const form = document.querySelector('form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const files = document.querySelector('[type=file]').files;
+    const formData = new FormData();
+
+    for (let i = 0; i < files.length; i++) {
+        let file = files[i];
+
+        formData.append('files[]', file);
+    }
+
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    }).then(response => {
+        return response.text();
+    }).then(data => {
+        console.log(data);
+    });
+});
     </script> 
     <!-- Fine Uploader Thumbnails template w/ customization
     ====================================================================== -->
@@ -159,6 +161,11 @@
                         id="but_upload"> 
             </div> 
         </form> 
+        
+         <form method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple>
+        <input type="submit" value="Upload File" name="submit">
+    </form>
     </div>     
     
     
