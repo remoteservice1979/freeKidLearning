@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<!-- Twitter Docs - https://dev.twitter.com/web/intents#tweet-intent -->
+<a href="https://twitter.com/intent/tweet?url=http://mywebsite.com&via=corbanb&text=Custom copy for the tweet"></a>
+
+<!-- Facebook Docs - https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.1 -->
+<div class="fb-share-button"></div>
+
+<script>
+
+	// INIT FACEBOOK APP
+      window.fbAsyncInit = function() {
+
+        FB.init({
+          appId      : '1531308680396185',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+
+
+        // ADD CLICK HANDLER
+        $('.fb-share-button').click(function(){
+
+        	<!-- Facebook Docs - https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.1 -->
+        	FB.ui({
+			  'method': 'feed',
+			  'description': 'My Custom Share Copy',
+			  'href': 'http://codingstar.org.in',
+			  'picture': 'http://codingstar.org.in/custom_share_image.jpg'
+			}, function(response){});
+
+        });
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+</body>
+</html>
