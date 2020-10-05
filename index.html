@@ -14,6 +14,9 @@
 	<script type="text/javascript" src="./audio/Audio-HTML5.js"></script>
 	<link rel="stylesheet" href="./whatup/floating-wpp.css">
     <script type="text/javascript" src="./whatup/floating-wpp.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<a href="https://twitter.com/intent/tweet?url=http://codingstar.org.in&via=corbanb&text=Custom copy for the tweet"></a>
+
 	
 		  <script type="text/javascript" src="./Title Here_files/main.js"></script>
 	
@@ -206,7 +209,46 @@
 					<div class="banner-form-w3 ml-lg-5">
 						<div class="padding editContent">
 							<!-- banner form -->
-							   <a href="https://remoteservice1979.github.io/freeKidLearning/login/login_register_modal.html" class="btn btn-banner my-3">Already  Registered</a>
+							   <a href="https://remoteservice1979.github.io/freeKidLearning/login/login_register_modal.html" class="btn btn-banner my-3">Login Please</a>
+							   <div class="fb-share-button btn"></div>
+							   <script>
+
+	// INIT FACEBOOK APP
+      window.fbAsyncInit = function() {
+
+        FB.init({
+          appId      : '1531308680396185',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+
+
+        // ADD CLICK HANDLER
+        $('.fb-share-button').click(function(){
+
+        	<!-- Facebook Docs - https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.1 -->
+        	FB.ui({
+			  'method': 'feed',
+			  'description': 'My Custom Share Copy',
+			  'href': 'http://codingstar.org.in',
+			  'picture': 'http://codingstar.org.in/logo.jpeg'
+			}, function(response){});
+
+        });
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
 							<form	action="https://formspree.io/xdopkdva" onsubmit="return checkSelection()"	method="POST">
 								<h5 class="mb-3 editContent">Register and Join in our Free Group</h5>
 								<div class="form-style-w3ls">
