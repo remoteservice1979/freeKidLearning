@@ -225,41 +225,7 @@
 								  color="<blue | white>" 
 								  size="<standard | large | xlarge>">
 							  </div	    
-							   <script>
-
-	// INIT FACEBOOK APP
-      window.fbAsyncInit = function() {
-
-        FB.init({
-          appId      : '1531308680396185',
-          xfbml      : true,
-          version    : 'v2.1'
-        });
-
-
-        // ADD CLICK HANDLER
-        $('.fb-share-button').click(function(){
-
-        	<!-- Facebook Docs - https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.1 -->
-        	FB.ui({
-			  'method': 'feed',
-			  'description': 'My Custom Share Copy',
-			  'href': 'http://codingstar.org.in',
-			  'picture': 'http://codingstar.org.in/logo.jpeg'
-			}, function(response){});
-
-        });
-
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
+							
 
 <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
 
@@ -761,6 +727,41 @@
       });
 
       </script>
+   <script>
+
+	// INIT FACEBOOK APP
+      window.fbAsyncInit = function() {
+
+        FB.init({
+          appId      : '1531308680396185',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+
+
+        // ADD CLICK HANDLER
+        $('.fb-share-button').click(function(){
+
+        	<!-- Facebook Docs - https://developers.facebook.com/docs/sharing/reference/feed-dialog/v2.1 -->
+        	FB.ui({
+			  'method': 'feed',
+			  'description': 'My Custom Share Copy',
+			  'href': 'http://codingstar.org.in',
+			  'picture': 'http://codingstar.org.in/logo.jpeg'
+			}, function(response){});
+
+        });
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
 </html>
