@@ -41,28 +41,7 @@
 </head>
 
 <script>
-	function first() {
-		var first =  document.getElementById("slides_1");
-		first.click();
-		setTimeout(function(){ 
-			second();
-			}, 3000);
-	}
-	function second() {
-		var first =  document.getElementById("slides_2");
-		first.click();
-		setTimeout(function(){ 
-			third();
-			}, 6000);
-	}
-	function third() {
-		var first =  document.getElementById("slides_3");
-		first.click();
-	}
-	setTimeout(function(){ 
-         var first =  document.getElementById("slides_1");
-		first.click();
-	}, 10000);
+	
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 	var provider = new firebase.auth.GoogleAuthProvider();
