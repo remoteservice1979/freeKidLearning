@@ -1,8 +1,3 @@
-<!--
-> Muaz Khan     - https://github.com/muaz-khan
-> MIT License   - https://www.webrtc-experiment.com/licence/
-> Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/screen-sharing
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,9 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
-        <meta name="author" content="Muaz Khan">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
 
         <link rel="stylesheet" href="https://www.webrtc-experiment.com/style.css">
 
@@ -94,31 +87,18 @@
         <article>
             <header style="text-align: center;">
                 <h1>
-                    WebRTC Screen Sharing
+                    Coding Star Screen Sharing
                 </h1>
                 <p>
                     <a href="https://www.webrtc-experiment.com/">HOME</a>
                     <span> &copy; </span>
-                    <a href="http://www.MuazKhan.com/" target="_blank">Muaz Khan</a>
-
-                    .
-                    <a href="http://twitter.com/WebRTCWeb" target="_blank" title="Twitter profile for WebRTC Experiments">@WebRTCWeb</a>
-
-                    .
-                    <a href="https://github.com/muaz-khan?tab=repositories" target="_blank" title="Github Profile">Github</a>
-
-                    .
-                    <a href="https://github.com/muaz-khan/WebRTC-Experiment/issues?state=open" target="_blank">Latest issues</a>
-
-                    .
-                    <a href="https://github.com/muaz-khan/WebRTC-Experiment/commits/master" target="_blank">What's New?</a>
+                   
                 </p>
             </header>
 
             <div class="github-stargazers"></div>
 
-            <h2 id="number-of-participants" style="display: block;text-align: center;border:0;margin-bottom:0;">Its a full-HD (1080p) screen sharing application using <a href="https://www.webrtc-experiment.com/">WebRTC</a>!</h2>
-
+            
             <!-- just copy this <section> and next script -->
             <section class="experiment">
                 <section class="hide-after-join">
@@ -149,7 +129,7 @@
                 var channel = location.href.replace(/\/|:|#|%|\.|\[|\]/g, '');
                 var sender = Math.round(Math.random() * 999999999) + 999999999;
 
-                // https://github.com/muaz-khan/WebRTC-Experiment/tree/master/socketio-over-nodejs
+             
                 var SIGNALING_SERVER = 'https://socketio-over-nodejs2.herokuapp.com:443/';
                 io.connect(SIGNALING_SERVER).emit('new-channel', {
                     channel: channel,
@@ -273,8 +253,6 @@
                 // todo: need to check exact chrome browser because opera also uses chromium framework
                 var isChrome = !!navigator.webkitGetUserMedia;
 
-                // DetectRTC.js - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/DetectRTC
-                // Below code is taken from RTCMultiConnection-v1.8.js (http://www.rtcmulticonnection.org/changes-log/#v1.8)
                 var DetectRTC = {};
 
                 (function () {
