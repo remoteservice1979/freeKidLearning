@@ -370,37 +370,7 @@
             <section class="experiment">
                 <h2>Common issues & queries</h2>
               
-            </section>
-
-            <section class="experiment">
-                <h2 class="header">Why Screen Sharing Fails?</h2>
-                <ol>
-                    <li>
-                        You've not used '<strong>chromeMediaSource</strong>' or '<strong>mediaSource</strong>' constraint:
-                        <pre>
-// for chrome
-mandatory: {chromeMediaSource: 'screen'}
-// or desktop-Capturing
-mandatory: {chromeMediaSource: 'desktop'}
-
-// for Firefox (https-only)
-video: {
-    mediaSource: 'window' || 'screen'
-}
-
-// for Edge &gt;= 17 (https-only)
-navigator.getDisplayMedia({
-    video: true
-}).then(successCallback, errorCallback);
-</pre>
-                    </li>
-                    <li>On chrome, you requested audio-stream alongwith '<strong>chromeMediaSource</strong>' – it is not permitted on chrome. Remember, Firefox is supporting audio+screen from single getUserMedia request.</li>
-                    <li>On chrome, you're not testing it on SSL origin (HTTPS domain) otherwise you didn't enable <code><a href="http://peter.sh/experiments/chromium-command-line-switches/#allow-http-screen-capture" target="_blank">--allow-http-screen-capture</a></code> command-line flag on canary. Firefox is supporting screen capturing from both HTTP and HTTPs domains.</li>
-                    <li>You may used media constraints like min/max frameRate; bandwidth or min/max width/height like 2000*2000 that is "currently" not allowed.</li>
-                </ol>
-            </section>
-
-            <section class="experiment">
+        
               
               
         <pre>
