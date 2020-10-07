@@ -117,10 +117,7 @@
             </section>
 
             <script>
-                // Muaz Khan     - https://github.com/muaz-khan
-                // MIT License   - https://www.webrtc-experiment.com/licence/
-                // Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/screen-sharing
-
+              
                 var videosContainer = document.getElementById("videos-container") || document.body;
                 var roomsList = document.getElementById('rooms-list');
 
@@ -296,7 +293,7 @@
                             // extension notified his presence
                             if(data == 'rtcmulticonnection-extension-loaded') {
                                 if(document.getElementById('install-button')) {
-                                    document.getElementById('install-button').parentNode.innerHTML = '<strong>Great!</strong> <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk" target="_blank">Google chrome extension</a> is installed.';
+                                    document.getElementById('install-button').parentNode.innerHTML = '<strong>Great!</strong> <a href="https://chrome.google.com/webstore/detail/with-my-own-eyes-screen-c/cigkbmjhnhkhoonlcennlonfjmmkpdln" target="_blank">Google chrome extension</a> is installed.';
                                 }
                                 DetectRTC.screen.chromeMediaSource = 'desktop';
                             }
@@ -339,7 +336,7 @@
                 DetectRTC.screen.getChromeExtensionStatus(function(status) {
                     if(status == 'installed-enabled') {
                         if(document.getElementById('install-button')) {
-                            document.getElementById('install-button').parentNode.innerHTML = '<strong>Great!</strong> <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk" target="_blank">Google chrome extension</a> is installed.';
+                            document.getElementById('install-button').parentNode.innerHTML = '<strong>Great!</strong> <a href="https://chrome.google.com/webstore/detail/with-my-own-eyes-screen-c/cigkbmjhnhkhoonlcennlonfjmmkpdln" target="_blank">Google chrome extension</a> is installed.';
                         }
                         DetectRTC.screen.chromeMediaSource = 'desktop';
                     }
@@ -361,48 +358,18 @@
                 <ol>
                     <li>
                         Chrome?
-                        <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk" target="_blank">Store</a>
+                        <a href="https://chrome.google.com/webstore/detail/with-my-own-eyes-screen-c/cigkbmjhnhkhoonlcennlonfjmmkpdln" target="_blank">Store</a>
                         <button onclick="!!navigator.webkitGetUserMedia && !!window.chrome && !!chrome.webstore && !!chrome.webstore.install && chrome.webstore.install('https://chrome.google.com/webstore/detail/with-my-own-eyes-screen-c/cigkbmjhnhkhoonlcennlonfjmmkpdln', function() {location.reload();})" id="install-button" style="font-size:inherit; padding-bottom:0;">Click to Install</button>
                     </li>
 
-                    <li>
-                        Firefox? Please use version 52 or higher. Also use HTTPs.
-                    </li>
-
-                    <li>
-                        Edge? Please use version 17 or higher. Also use HTTPs.
-                    </li>
-
-                    <li>
-                        Safari? Please use version 11 (on Mac or iphone/ipad). However Safari can merely view screens. Safari can not share its own screen.
-                    </li>
+                   
                 </ol>
             </section>
 
             <section class="experiment"><small id="send-message"></small></section>
-
-            <section class="experiment">
-                <h2>Advantages</h2>
-                <ol>
-                    <li>Share full screen with one or more users in <strong>HD</strong> format!</li>
-                    <li>Share screen from chrome and view over all WebRTC compatible browsers/plugins.</li>
-                    <li>
-                        You can open private rooms and it will be really "totally" private!<br /><br />
-                        <ol>
-                            <li>Use hashes to open private rooms: <strong>#private-room</strong></li>
-                            <li>Use URL parameters to open private rooms: <strong>?private=room</strong></li>
-                        </ol>
-                    </li>
-                </ol>
-            </section>
-
             <section class="experiment">
                 <h2>Common issues & queries</h2>
-                <ol>
-                    <li>Recursive cascade images or blurred screen experiences occur only when you try to share screen between two tabs on the same system. This NEVER happens when sharing between unique systems or devices.</li>
-                    <li>Opera/IE/Safari has no support of screen-capturing yet. However, you can view shared screens on Opera/IE/Safari!</li>
-                    <li>Remember, it is not desktop sharing! It is just a state-less screen sharing. Desktop sharing is possible only through native (C++) applications.</li>
-                </ol>
+              
             </section>
 
             <section class="experiment">
@@ -434,10 +401,8 @@ navigator.getDisplayMedia({
             </section>
 
             <section class="experiment">
-                <h2 class="header">How to use <a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/screen-sharing">screen.js</a>?</h2>
-                <pre>
-&lt;script src="//www.webrtc-experiment.com/screen.js"&gt;&lt;/script&gt;
-</pre>
+              
+              
         <pre>
 var screen = new Screen('screen-unique-id');
 
@@ -469,28 +434,10 @@ document.getElementById('share-screen').onclick = function() {
 </pre>
             </section>
 
-            <section class="experiment">
-                <h2 class="header">Suggestions</h2>
-                <ol>
-                    <li>
-                        <a href="https://github.com/muaz-khan/RTCMultiConnection" target="_blank">RTCMultiConnection.js</a> can be used for HD screen sharing; HD audio/video streaming; fastest file sharing; and writing entire skype-like app in the browser!
-                    </li>
-                </ol>
-            </section>
-
+           
         </article>
 
-        <a href="https://github.com/muaz-khan/WebRTC-Experiment/tree/master/screen-sharing" class="fork-left"></a>
-
-        <footer>
-            <p>
-                <a href="https://www.webrtc-experiment.com/">WebRTC Experiments</a>
-                © <a href="https://plus.google.com/+MuazKhan" rel="author" target="_blank">Muaz Khan</a>
-                <a href="mailto:muazkh@gmail.com" target="_blank">muazkh@gmail.com</a>
-            </p>
-        </footer>
-
-        <!-- commits.js is useless for you! -->
+            <!-- commits.js is useless for you! -->
         <script src="https://www.webrtc-experiment.com/commits.js" async> </script>
     </body>
 </html>
