@@ -528,8 +528,11 @@ function updateListOfRooms(rooms) {
         }
         
         $(tr).html(html);
+		if(room.extra.userFullName === 'Anil') {
+		
         $('#rooms-list').append(tr);
 
+         }
         $(tr).find('.join-room').click(function() {
             $(tr).find('.join-room').prop('disabled', true);
 
