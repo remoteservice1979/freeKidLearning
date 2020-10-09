@@ -344,7 +344,7 @@ input[disabled], button[disabled] {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="btn-create-room">Create</button>
+          <button type="button" class="btn btn-primary" id="btn-create-room">Create r</button>
         </div>
       </div>
     </div>
@@ -616,13 +616,14 @@ function joinAHiddenRoom(roomid) {
 
 function openCanvasDesigner() {
     $('#startRoomModel').modal('hide');
-    var href = location.href + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+    var href = 'https://rtcmulticonnection.herokuapp.com/demos/dashboard/' + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
     
     if(!!connection.password) {
       href += '&password=' + connection.password;
     }
 
     var newWin = window.open(href);
+	
     if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
         var html = '';
         html += '<p>Please click following link:</p>';
