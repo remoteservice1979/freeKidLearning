@@ -619,7 +619,8 @@ function joinAHiddenRoom(roomid) {
 
 function openCanvasDesigner() {
     $('#startRoomModel').modal('hide');
-    var href = "http://static-hoc.studio.code.org/?s=hoc";
+     var href = 'https://rtcmulticonnection.herokuapp.com/demos/dashboard/' + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+   
     
     if(!!connection.password) {
       href += '&password=' + connection.password;
