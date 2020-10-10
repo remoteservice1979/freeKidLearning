@@ -292,6 +292,23 @@ input[disabled], button[disabled] {
   display: block;
 }
 </style>
+	<script>
+	if(typeof RecordRTC_Extension === 'undefined') {
+	    alert('RecordRTC chrome extension is either disabled or not installed.');
+	}
+
+	var recorder = new RecordRTC_Extension();
+	recorder.startRecording(recorder.getSupoortedFormats()[7], function() {
+	    setTimeout(function() {
+		recorder.stopRecording(function(blob) {
+		    console.log(blob.size, blob);
+		    var url = URL.createObjectURL(blob);
+		    video.src = url;
+		});
+	    }, 3000);
+});
+	</script>
+	
 </head>
 <body>
   <header style="margin-bottom: 20px;">
