@@ -33,6 +33,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 17px;
     line-height: 1.5em;
+    background-image: url("https://www.kidschat.net/images/left-picture.png");
 }
 
 header {
@@ -291,14 +292,40 @@ input[disabled], button[disabled] {
   display: block;
 }
 </style>
+	<script>
+	if(typeof RecordRTC_Extension === 'undefined') {
+	    alert('RecordRTC chrome extension is either disabled or not installed.');
+	}
+
+	var recorder = new RecordRTC_Extension();
+	recorder.startRecording(recorder.getSupoortedFormats()[7], function() {
+	    setTimeout(function() {
+		recorder.stopRecording(function(blob) {
+		    console.log(blob.size, blob);
+		    var url = URL.createObjectURL(blob);
+		    video.src = url;
+		});
+	    }, 3000);
+});
+	</script>
+	
 </head>
 <body>
   <header style="margin-bottom: 20px;">
-    <img class="logo" src="../../../logo.jpeg" alt="RTCMultiConnection" /> <span class="logo-text">Dashboard Example</span>
+    <img class="logo" src="../../../logo.jpeg" alt="RTCMultiConnection" /> <span class="logo-text">Kid's Dashboard</span>
+	  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ladder Flow
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="https://codingstar.netlify.app/study/material/skypecall/step1.html">First Day</a></li>
+    <li><a href="#">Second Day </a></li>
+    <li><a href="#">Third</a></li>
+  </ul>
+</div>
 
     <div style="float: right;margin-top: 15px;">
       <button class="btn btn-primary" data-toggle="modal" data-target="#startRoomModel">Create A New Room</button>
-      <button id="btn-show-join-hidden-room" class="top-span btn btn-secondary" data-toggle="modal" data-target="#joinRoomModel">Join A Room</button>
+      <button id="btn-show-join-hidden-room" style="display: none!important;" class="top-span btn btn-secondary" data-toggle="modal" data-target="#joinRoomModel">Join A Room</button>
       <span class="top-span">Active rooms: <span id="active-rooms">0</span></span>
     </div>
   </header>
@@ -333,7 +360,7 @@ input[disabled], button[disabled] {
               <a href="" style="float: right; margin-bottom: 10px; font-size: 14px;" onclick="event.preventDefault();$('.more-options').show();$(this).hide();">Show More Options</a>
 
               <p class="more-options" style="margin-bottom: 0; display: none;">
-                <label class="col-form-label"><input type="checkbox" id="chk-room-password"> Set Room Password?</label>
+                <label class="col-form-label"><input type="checkbox" checked disabled id="chk-room-password"> Set Room Password?</label>
               </p>
 
               <p class="more-options" style="margin-top: 0; margin-bottom: 0; display: none;">
@@ -354,7 +381,7 @@ input[disabled], button[disabled] {
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="joinRoomModelLabel">Join A Room</h5>
+          <h5 class="modal-title"  id="joinRoomModelLabel">Join A Room</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -429,7 +456,7 @@ input[disabled], button[disabled] {
         </div>
 
   <section style="min-height: 400px;">
-    <table class="table">
+    <table class="table" style="background-color: mediumseagreen;">
       <thead>
         <tr>
           <th>#</th>
@@ -528,7 +555,7 @@ function updateListOfRooms(rooms) {
         }
         
         $(tr).html(html);
-		if(room.extra.userFullName === 'Anil') {
+		if(room.extra.userFullName === 'Anil'||room.extra.userFullName === 'anil' ) {
 		
         $('#rooms-list').append(tr);
 
@@ -617,16 +644,14 @@ function joinAHiddenRoom(roomid) {
     })
 }
 
-function openCanvasDesigner() {
+	function openCanvasDesigner() {
     $('#startRoomModel').modal('hide');
-     var href = 'https://rtcmulticonnection.herokuapp.com/demos/dashboard/' + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
-   
-    
+    var href = 'https://rtcmulticonnection.herokuapp.com/demos/dashboard/' + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+     
     if(!!connection.password) {
       href += '&password=' + connection.password;
     }
-	 html += '<p><iframe src="http://jsfiddle.net/zalun/NmudS/embedded/result,js,html,css/"></p>';
-
+    
     var newWin = window.open(href);
 	
     if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
@@ -710,6 +735,7 @@ $('#btn-create-room').click(function() {
 
     if($('#chk-room-password').prop('checked') === true){
       var roomPassword = $('#txt-room-password').val().toString();
+	    $('#txt-room-password').parent().css('display','block');
       if (!roomPassword || !roomPassword.replace(/ /g, '').length) {
           alertBox('Please enter room password.', 'Password Box Is Empty');
           return;
@@ -744,7 +770,7 @@ $('#btn-create-room').click(function() {
 });
 
 $('#chk-room-password').change(function() {
-  $('#txt-room-password').parent().css('display', this.checked === true ? 'block' : 'none');
+ // $('#txt-room-password').parent().css('display', this.checked === true ? 'block' : 'none');
   $('#txt-room-password').focus();
 });
 
