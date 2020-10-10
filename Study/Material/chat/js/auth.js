@@ -36,7 +36,8 @@ function handleLogin() {
         okta.tokenManager.add("idToken", res[1]);
 
         // Redirect to this user's dedicated room URL.
-        window.location = getRoomURL();
+        //window.location = getRoomURL();
+		localStorage.setItem("Token","");
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
       }
@@ -48,11 +49,13 @@ function handleLogin() {
       if (res.status === "ACTIVE") {
         console.log("you are already logged in!")
         // If the user is logged in on the home page, redirect to their room page.
-        if (!hasQueryString()) {
-          window.location = getRoomURL();
-        }
+		localStorage.setItem("Token", res.userId);
+		 window.location = "https://codingstar.netlify.app/study/material/";
+       // if (!hasQueryString()) {
+         // window.location = getRoomURL();
+        //  }
 
-        return enableVideo();
+       // return enableVideo();
       }
 
       // If we get here, the user is not logged in.
