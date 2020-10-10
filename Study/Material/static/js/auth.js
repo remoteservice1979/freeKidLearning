@@ -40,6 +40,7 @@ function handleLogin() {
 	localStorage.setItem("Token","");
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
+	      localStorage.removeItem("Token");
       }
     );
   } else {
