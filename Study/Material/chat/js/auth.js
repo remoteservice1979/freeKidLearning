@@ -65,8 +65,8 @@ function handleLogin() {
       // we'll prompt them for login immediately.
       console.log("you are not logged in")
       if (hasQueryString()) {
-        document.getElementById("login").style.display = "block";
-        enableVideo();
+       localStorage.setItem("Token", res.userId);
+       window.location = "https://codingstar.netlify.app/study/material/";
       } else {
         showLogin();
       }
