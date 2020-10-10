@@ -37,7 +37,7 @@ function handleLogin() {
 
         // Redirect to this user's dedicated room URL.
         //window.location = getRoomURL();
-		localStorage.setItem("Token","");
+	localStorage.setItem("Token","");
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
       }
