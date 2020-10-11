@@ -65,6 +65,10 @@ function handleLogin() {
 
        // return enableVideo();
       }
+	     if (res.status !== "ACTIVE") {
+	    
+	     document.getElementById("dashboard").style.display = "none";
+	     }
 
       // If we get here, the user is not logged in.
 
