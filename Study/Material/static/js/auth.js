@@ -54,7 +54,7 @@ function handleLogin() {
         console.log("you are already logged in!")
         // If the user is logged in on the home page, redirect to their room page.
 		localStorage.setItem("Token", "ACTIVE");
-	        localStorage.setItem("UserName", res.userName);
+	        localStorage.setItem("UserName", res.login);
 		// window.location = "https://codingstar.netlify.app/study/material/";
        // if (!hasQueryString()) {
          // window.location = getRoomURL();
