@@ -15,7 +15,7 @@ var okta = new OktaSignIn(oktaConfig);
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
     alert("Couldn't render the login form, something horrible must have happened. Please refresh the page.");
-	  localStorage.setItem("Token","UNActive");
+	  localStorage.setItem("Token","UNACTIVE");
   });
 
   document.getElementById("login").style.display = "none";
@@ -39,7 +39,7 @@ function handleLogin() {
 
         // Redirect to this user's dedicated room URL.
         //window.location = getRoomURL();
-	localStorage.setItem("Token","Active");
+	localStorage.setItem("Token","ACTIVE");
 	// window.location = "https://codingstar.netlify.app/study/material/";
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
