@@ -166,8 +166,7 @@
 }
 .ct-language{
 	position: relative;
-  background: #00aced;
-  color: #fff;
+ 
   padding: 10px 0;
 }
 .ct-language:hover .ct-language__dropdown{
