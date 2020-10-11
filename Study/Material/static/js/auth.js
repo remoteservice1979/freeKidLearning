@@ -38,7 +38,7 @@ function handleLogin() {
         // Redirect to this user's dedicated room URL.
         //window.location = getRoomURL();
 	localStorage.setItem("Token","Active");
-	 window.location = "https://codingstar.netlify.app/study/material/";
+	// window.location = "https://codingstar.netlify.app/study/material/";
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
 	      localStorage.removeItem("Token");
