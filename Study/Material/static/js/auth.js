@@ -36,7 +36,7 @@ function handleLogin() {
         // Save the tokens for later use, e.g. if the page gets refreshed:
         okta.tokenManager.add("accessToken", res[0]);
         okta.tokenManager.add("idToken", res[1]);
-
+          document.getElementById("dashboard").style.display = "block";
         // Redirect to this user's dedicated room URL.
         //window.location = getRoomURL();
 	localStorage.setItem("Token","Active");
@@ -55,7 +55,8 @@ function handleLogin() {
         // If the user is logged in on the home page, redirect to their room page.
 		localStorage.setItem("Token", "ACTIVE");
 	        localStorage.setItem("UserName", res.login);
-	        document.getElementById("dashboard").style.display = "block";
+	       document.getElementById("okta-login-container").style.display = "none";
+	       
 		// window.location = "https://codingstar.netlify.app/study/material/";
        // if (!hasQueryString()) {
          // window.location = getRoomURL();
