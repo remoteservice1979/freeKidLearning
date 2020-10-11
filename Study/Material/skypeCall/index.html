@@ -294,8 +294,15 @@ input[disabled], button[disabled] {
 </style>
 	<script>
 	if(typeof RecordRTC_Extension === 'undefined') {
-	    alert('RecordRTC chrome extension is either disabled or not installed.');
+	   // alert('RecordRTC chrome extension is either disabled or not installed.');
 	}
+		   $(document).ready(function() {
+       
+		var token = localStorage.getItem('Token');
+		if (token !== 'Active' ){
+		window.location="/";
+		}
+    });
 
 	var recorder = new RecordRTC_Extension();
 	recorder.startRecording(recorder.getSupoortedFormats()[7], function() {
