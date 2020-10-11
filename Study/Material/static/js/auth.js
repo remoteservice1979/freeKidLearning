@@ -10,7 +10,7 @@ var oktaConfig = {
 }
 // https://dev-457161.okta.com/oauth2/default/.well-known/oauth-authorization-server
 var okta = new OktaSignIn(oktaConfig);
-
+ document.getElementById("dashboard").style.display = "none";
 // Render the login form anil
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
@@ -55,6 +55,7 @@ function handleLogin() {
         // If the user is logged in on the home page, redirect to their room page.
 		localStorage.setItem("Token", "ACTIVE");
 	        localStorage.setItem("UserName", res.login);
+	        document.getElementById("dashboard").style.display = "block";
 		// window.location = "https://codingstar.netlify.app/study/material/";
        // if (!hasQueryString()) {
          // window.location = getRoomURL();
