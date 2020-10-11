@@ -10,7 +10,7 @@ var oktaConfig = {
 }
 // https://dev-457161.okta.com/oauth2/default/.well-known/oauth-authorization-server
 var okta = new OktaSignIn(oktaConfig);
- document.getElementById("dashboard").style.display = "none";
+ 
 // Render the login form anil
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
