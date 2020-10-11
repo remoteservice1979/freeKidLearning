@@ -39,7 +39,7 @@ function handleLogin() {
           document.getElementById("dashboard").style.display = "block";
         // Redirect to this user's dedicated room URL.
         //window.location = getRoomURL();
-	localStorage.setItem("Token","Active");
+	localStorage.setItem("Token","ACTIVE");
 	// window.location = "https://codingstar.netlify.app/study/material/";
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
@@ -73,7 +73,7 @@ function handleLogin() {
       // we'll prompt them for login immediately.
       console.log("you are not logged in")
       if (hasQueryString()) {
-       //
+        document.getElementById("dashboard").style.display = "block";
        
       } else {
 	  localStorage.setItem("Token", res.status);    
