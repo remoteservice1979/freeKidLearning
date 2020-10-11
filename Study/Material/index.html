@@ -11,7 +11,7 @@
     $(document).ready(function() {
        
 		var token = localStorage.getItem('Token');
-		if (token === 'INACTIVE' ){
+		if (token !== 'Active' ){
 		alert('not a legal User... Connect to Mr. Anil ');
 		window.location.assign('/');
 		}
