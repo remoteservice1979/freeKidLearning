@@ -80,7 +80,9 @@ function handleLogin() {
         document.getElementById("dashboard").style.display = "block";
        
       } else {
-	  localStorage.setItem("Token", res.status);    
+	  localStorage.setItem("Token", res.status);   
+	  document.getElementById("dashboard").style.display = "none";
+	  document.getElementById("okta-login-container").style.display = "block";
         showLogin();
       }
     });
