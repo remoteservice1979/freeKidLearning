@@ -299,7 +299,8 @@ input[disabled], button[disabled] {
 		   $(document).ready(function() {
        
 		var token = localStorage.getItem('Token');
-		if (token !== 'Active' ){
+	         var userName = localStorage.getItem('emailId');
+		if (token !== 'ACTIVE' ){
 		window.location="/";
 		}
     });
