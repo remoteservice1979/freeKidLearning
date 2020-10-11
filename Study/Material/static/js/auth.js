@@ -55,7 +55,8 @@ function handleLogin() {
         // If the user is logged in on the home page, redirect to their room page.
 		localStorage.setItem("Token", "ACTIVE");
 	        localStorage.setItem("UserName", res.login);
-	       document.getElementById("okta-login-container").style.display = "block";
+	       document.getElementById("okta-login-container").style.display = "none";
+	        document.getElementById("dashboard").style.display = "block";
 	       
 		// window.location = "https://codingstar.netlify.app/study/material/";
        // if (!hasQueryString()) {
