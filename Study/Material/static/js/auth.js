@@ -39,7 +39,7 @@ function handleLogin() {
 
         // Redirect to this user's dedicated room URL.
         //window.location = getRoomURL();
-	localStorage.setItem("Token","ACTIVE");
+	localStorage.setItem("Token","Active");
 	// window.location = "https://codingstar.netlify.app/study/material/";
       }, function error(err) {
         alert("We weren't able to log you in, something horrible must have happened. Please refresh the page.");
@@ -53,9 +53,9 @@ function handleLogin() {
       if (res.status === "ACTIVE") {
         console.log("you are already logged in!")
         // If the user is logged in on the home page, redirect to their room page.
-		localStorage.setItem("Token", res.userId);
+		localStorage.setItem("Token", "ACTIVE");
 	        localStorage.setItem("UserName", res.userName);
-		 window.location = "https://codingstar.netlify.app/study/material/";
+		// window.location = "https://codingstar.netlify.app/study/material/";
        // if (!hasQueryString()) {
          // window.location = getRoomURL();
         //  }
