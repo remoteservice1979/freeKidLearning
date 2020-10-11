@@ -1,0 +1,67 @@
+h1 {
+  text-align: center;
+  margin-right: 40px;
+  font-size: 66px;
+}
+
+
+body {
+  font-family: "Verdana";
+}
+.container {
+  width: 700px;
+  margin: auto;
+  content: '';
+  display: block;
+  clear: both;
+  text-align: center;
+}
+
+.container h1 {
+  margin-right: 40px;
+}
+
+.pile {
+  display: block;
+  background-color: #5C1F00;
+  height: 250px;
+  width: 20px;
+  position: absolute;
+  margin-left: 100px;
+  z-index: -1;
+}
+
+.pile-container {
+  width: 220px;
+  height: 250px;
+  display: block;
+  float: left;
+  position: relative;
+  transform: rotate(180deg);
+  z-index: 400;
+
+}
+
+.disk {
+  border: 1px solid black;
+  background: blue;
+  height: 40px;
+  display: block;
+  margin: auto;
+}
+
+.small {
+  width: 20%;
+}
+
+.medium {
+  width: 35%;
+}
+
+.large {
+  width: 50%;
+}
+
+.selected {
+  background: yellow;
+}
