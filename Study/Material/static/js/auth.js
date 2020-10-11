@@ -15,6 +15,7 @@ var okta = new OktaSignIn(oktaConfig);
 function showLogin() {
   okta.renderEl({ el: "#okta-login-container" }, function(res) {}, function(err) {
     alert("Couldn't render the login form, something horrible must have happened. Please refresh the page.");
+	  localStorage.setItem("Token","UNActive");
   });
 
   document.getElementById("login").style.display = "none";
@@ -28,6 +29,7 @@ function hasQueryString() {
 // Handle the user's login and what happens next.
 function handleLogin() {
   // If the user is logging in for the first time...
+ 
   if (okta.token.hasTokensInUrl()) {
     okta.token.parseTokensFromUrl(
       function success(res) {
