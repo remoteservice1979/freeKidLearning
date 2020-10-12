@@ -30,7 +30,33 @@ Game.prototype.move = function (startTowerIdx, endTowerIdx) {
     return false;
   }
 };
+funtion setUser () {
+  var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+         var msg; 
+        function winner() {
+		var email =  localStorage.getItem("UserName");
+         db.transaction(function (tx) { 
+            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, email)'); 
+           
+            msg = '<p>Who is the Winner</p>'; 
+            document.querySelector('#status').innerHTML =  msg; 
+         })
+	}
 
+         db.transaction(function (tx) { 
+            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
+               var len = results.rows.length, i; 
+               msg = "<p>Found rows: " + len + "</p>"; 
+               document.querySelector('#status').innerHTML +=  msg; 
+      
+               for (i = 0; i < len; i++) { 
+                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>"; 
+                  document.querySelector('#status').innerHTML +=  msg; 
+               } 
+            }, null); 
+         }); 
+}
 Game.prototype.print = function () {
   console.log(JSON.stringify(this.towers));
 };
@@ -58,6 +84,7 @@ Game.prototype.run = function (reader, gameCompletionCallback) {
     } else {
       this.print();
       console.log("You win!");
+      setUser();
       gameCompletionCallback();
     }
   }).bind(this));
