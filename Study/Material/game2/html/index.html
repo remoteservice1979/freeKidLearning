@@ -20,36 +20,9 @@
                   document.getElementById("userId").innerHTML = email;
               }
 	    }
-      function sharefbimage() {
-    FB.init({ appId: `your appid`, status: true, cookie: true });
-	    FB.ui(
-	    {
-		method: `share`,
-		name: 'Facebook Dialogs',
-		href: $(location).attr('href'),
-		link: 'https://developers.facebook.com/docs/dialogs/',
-		picture: 'your image url',
-		caption: 'Ishelf Book',
-		description: 'your description'
-	    },
-	    function (response) {
-		if (response && response.post_id) {
-		    alert('success');
-		} else {
-		    alert('error');
-		}
-	    }
-	);
-     }
-	   
-	     function fbs_click(TheImg) {
-		     u=TheImg.src;
-		     // t=document.title;
-		    t=TheImg.getAttribute('alt');
-		    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
-		}
-	   
-
+     
+	    
+</script>
  
   <body onload="bodyOnloadHandler();">
     <h1>Towers of Hanoi for Coding King</h1>
