@@ -3,8 +3,28 @@
     <link href="../css/hanoi.css" rel="stylesheet" type="text/css">
     <title></title>
   </head>
-  <body>
+    <script>
+       var token =  localStorage.getItem("Token");
+       if(token !== 'ACTIVE'){
+        window.location.href = "/";
+         
+       }
+         
+		       function bodyOnloadHandler() {
+            var email =  localStorage.getItem("UserName");
+                if(email === null ) {
+                  document.getElementById("userId").value ="aftechnology@gmail.com";
+                } else {
+                  document.getElementById("userId").innerHTML = email;
+                }
+	         }
+	   
+	   
+    </script>
+ 
+  <body onload="bodyOnloadHandler();">
     <h1>Towers of Hanoi for Coding King</h1>
+     <span id="userId"></Span>
     <div class="container">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
