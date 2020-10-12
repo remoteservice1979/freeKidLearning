@@ -12,19 +12,21 @@
     <script src="../static/js/auth.js"></script>
     <script src="../static/js/video.js"></script>
 	       <script>
-	var email =  localStorage.getItem("UserName");
-	    if(email === null ) {
-              document.getElementById("userId").value ="aftechnology@gmail.com";
-	    } else {
-	      document.getElementById("userId").value = email;
-	    }
+		       function bodyOnloadHandler() {
+			var email =  localStorage.getItem("UserName");
+			    if(email === null ) {
+			      document.getElementById("userId").value ="aftechnology@gmail.com";
+			    } else {
+			      document.getElementById("userId").value = email;
+			    }
+	            }
 	   
 	   
     </script>
  
 	  
   </head>
-  <body>
+  <body onload="bodyOnloadHandler()">
     <div class="container">
       <header>
 	      <h2><p>Welcome to Secure Video Chat </p><p id="userId"> </h4> </p>
