@@ -11,6 +11,16 @@
     <script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
     <script src="../static/js/auth.js"></script>
     <script src="../static/js/video.js"></script>
+	       <script>
+	var email =  localStorage.getItem("UserName");
+	    if(email === null ) {
+              document.getElementById("userId").value ="aftechnology@gmail.com";
+	    } else {
+	      document.getElementById("userId").value = email;
+	    }
+	   
+	   
+    </script>
  
 	  
   </head>
@@ -63,14 +73,5 @@
     handleLogin();
    </script>
   </body>
-       <script>
-	var email =  localStorage.getItem("UserName");
-	    if(email === null ) {
-              document.getElementById("userId").value ="aftechnology@gmail.com";
-	    } else {
-	      document.getElementById("userId").value = email;
-	    }
-	   
-	   
-    </script>
+  
 </html>
