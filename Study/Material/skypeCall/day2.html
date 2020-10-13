@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard + Video Conferencing + Chat + File Sharing | RTCMultiConnection</title>
-  <meta name="description" content="WebRTC Dashboard including support for canvas drawing, canvas data syncing, video conferencing, screen sharing and video conferencing. Including chat and file sharing.">
+  <meta name="description" content="WebRTC Dashboard including support for Share Coding Screen to All participage. Including chat and file sharing.">
 
       <title>Free Learing for Jr Sr Kids </title>
                 <!-- add icon link -->
@@ -657,7 +657,7 @@ function joinAHiddenRoom(roomid) {
 //https://codingstar.netlify.app/study/material/skypecall/canvas.html
 	function openCanvasDesigner() {
     $('#startRoomModel').modal('hide');
-    var href = 'https://codingstar.netlify.app/study/material/skypecall/' + 'canvas.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+    var href = 'https://codingstar.netlify.app/study/material/skypecall/' + 'canvasCoding.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
      
     if(!!connection.password) {
       href += '&password=' + connection.password;
