@@ -298,14 +298,14 @@ input[disabled], button[disabled] {
 	if(typeof RecordRTC_Extension === 'undefined') {
 	   // alert('RecordRTC chrome extension is either disabled or not installed.');
 	}
-		   $(document).ready(function() {
+// 		   $(document).ready(function() {
        
-		var token = localStorage.getItem('Token');
-	         var userName = localStorage.getItem('UserName');
-		if (token !== 'ACTIVE' ){
-		window.location="/";
-		}
-    });
+// 		var token = localStorage.getItem('Token');
+// 	         var userName = localStorage.getItem('UserName');
+// 		if (token !== 'ACTIVE' ){
+// 		window.location="/";
+// 		}
+//     });
 
 	var recorder = new RecordRTC_Extension();
 	recorder.startRecording(recorder.getSupoortedFormats()[7], function() {
