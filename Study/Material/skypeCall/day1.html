@@ -654,10 +654,10 @@ function joinAHiddenRoom(roomid) {
         $('#btn-join-hidden-room').html(initialHTML).prop('disabled', false);
     })
 }
-
+//https://codingstar.netlify.app/study/material/skypecall/canvas.html
 	function openCanvasDesigner() {
     $('#startRoomModel').modal('hide');
-    var href = 'https://rtcmulticonnection.herokuapp.com/demos/dashboard/' + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+    var href = 'https://codingstar.netlify.app/study/material/skypecall/' + 'canvas.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
      
     if(!!connection.password) {
       href += '&password=' + connection.password;
@@ -775,7 +775,7 @@ $('#btn-create-room').click(function() {
 
         connection.sessionid = roomid;
         connection.isInitiator = true;
-       // openCanvasDesigner();
+        openCanvasDesigner();
         $('#btn-create-room').html(initialHTML).prop('disabled', false);
     });
 });
