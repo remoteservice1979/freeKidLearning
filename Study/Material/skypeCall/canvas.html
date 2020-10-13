@@ -222,8 +222,8 @@ connection.maxParticipantsAllowed = 1000;
 var designer = new CanvasDesigner();
 
 // you can place widget.html anywhere
-designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
-designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
+designer.widgetHtmlURL = 'https://codingstar.netlify.app/study/material/skypecall/widget.html';
+designer.widgetJsURL = 'https://codingstar.netlify.app/study/material/skypecall/widget.min.js'
 
 designer.addSyncListener(function(data) {
     connection.send(data);
