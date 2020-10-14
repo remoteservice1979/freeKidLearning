@@ -470,12 +470,14 @@
     </style>
     
      <script>
-        function selectSrc(e) {
-            var url = e.target.value;
+        function SetCard(sel) {
+            var url = sel.value;
             
             document.getElementById('Myframe').src = url;
             
         }
+         
+        
     </script>
 </head>
 
@@ -484,8 +486,9 @@
                 <div style="margin-left: 49px;">
                   <label for="cars">Choose the Day:</label>
 
-                    <select name="cars" id="cars">
-                      <option onClick="selectSrc();" value="https://codingstar.netlify.app/study/material/game2/html/">Day 1</option>
+                    <select name="cars" id="cars" onchange="SetCard(this)">
+                       <option onClick="selectSrc();"  selected="selected">(none) value="https://codingstar.netlify.app/study/material/game2/html/">Welcome</option>
+                      <option onClick="selectSrc();"  value="https://codingstar.netlify.app/study/material/game2/html/">Day 1</option>
                       <option onClick="selectSrc();" value="day2">Day 2</option>
                       <option onClick="selectSrc();"value="day3">Day 3</option>
                       <option onClick="selectSrc();" value="https://codepen.io/elkclone/pen/JwGMzK">Day 4 </option>
