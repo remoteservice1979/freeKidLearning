@@ -65,3 +65,10 @@ body {
 .selected {
   background: yellow;
 }
+
+@media (max-width:600px) {
+    .pile-container {
+    width:20%;
+    height:20%
+}
+}
