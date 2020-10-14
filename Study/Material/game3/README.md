@@ -1,15 +1,20 @@
-# Core
+Phaser Demo Game - «Space Ping Pong»
+====================================================
+Description
+--------
+Ping Pong Free is the only ping pong game you will ever require. The game maintains the original excitement of the classic arcade pong and adds modern elements to make it suitable for all skill levels.
+HTML5 game «Space Ping Pong» was developed with popular JS framework Phaser.io. It's a demo game with a goal to show the ability of creation of multiplayer games on Phaser with physic plugin BOX2D. The application is oriented both for mobile touch devices Aple (iPad, iPhone) and for PC and MAC. </br>[Demo](https://nixsolutions.github.io/demo-phaser-space-ping-pong/)
 
-Core is a small game built using the HTML5 canvas element and plenty of JavaScript.
+Features
+--------
+1. Multiplayer game based on socket.io
+2. Physics applied to bodies
+3. Game screen with functions: leave rooms, score players
 
-Curious about how this looks in action? [Check out the live demo.](http://hakim.se/experiments/html5/core/01).\
+Technologies
+------------
+* [Phaser.io](https://phaser.io/)
+* [Box2D](http://box2d.org/)
+* [Node.js](https://nodejs.org/)
+* [Socket.io](http://socket.io/)
 
-## Sound
-
-Sound design by Luis Bergmann (@luisbergmann)
-
-## License
-
-MIT licensed
-
-Copyright (C) 2018 Hakim El Hattab, http://hakim.se
