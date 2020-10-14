@@ -12,14 +12,7 @@
 
     <meta name="author" content="">
     <link rel="author" type="text/html" href="https://plus.google.com/+MK">
-    <script>
-        function selectSrc(e) {
-            var url = e.target.value;
-            
-            document.getElementById('Myframe').src = url;
-            
-        }
-    </script>
+   
 
     <style>
         
@@ -475,6 +468,15 @@
             cursor: pointer;
         }
     </style>
+    
+     <script>
+        function selectSrc(e) {
+            var url = e.target.value;
+            
+            document.getElementById('Myframe').src = url;
+            
+        }
+    </script>
 </head>
 
 <body>
@@ -483,10 +485,10 @@
                   <label for="cars">Choose the Day:</label>
 
                     <select name="cars" id="cars">
-                      <option onclick="selectSrc(this);" value="https://codingstar.netlify.app/study/material/game2/html/">Day 1</option>
-                      <option onclick="selectSrc(this);" value="day2">Day 2</option>
-                      <option onclick="selectSrc();"value="day3">Day 3</option>
-                      <option onclick="selectSrc();" value="https://codepen.io/elkclone/pen/JwGMzK">Day 4 </option>
+                      <option onClick="selectSrc();" value="https://codingstar.netlify.app/study/material/game2/html/">Day 1</option>
+                      <option onClick="selectSrc();" value="day2">Day 2</option>
+                      <option onClick="selectSrc();"value="day3">Day 3</option>
+                      <option onClick="selectSrc();" value="https://codepen.io/elkclone/pen/JwGMzK">Day 4 </option>
                     </select>
 
                </div>
