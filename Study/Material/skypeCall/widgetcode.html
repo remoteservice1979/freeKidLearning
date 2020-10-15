@@ -467,6 +467,29 @@
             vertical-align: middle;
             cursor: pointer;
         }
+        
+        .wrap {
+    width: 320px;
+    height: 192px;
+    padding: 0;
+    overflow: hidden;
+}
+.frame {
+    width: 1280px;
+    height: 786px;
+    border: 0;
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+    
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
     </style>
     
      <script>
@@ -512,7 +535,7 @@
         
         </canvas>
         <canvas id="main-canvas">
-         <iframe id="Myframe" src=" " name="c" frameborder="0" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="height:800px;width:1000px;margin-left: 49px;">
+         <iframe id="Myframe" class="frame" src=" " name="c" frameborder="0" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="height:800px;width:1000px;margin-left: 49px;">
         </iframe>
         
         </canvas>
