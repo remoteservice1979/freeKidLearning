@@ -298,14 +298,20 @@ input[disabled], button[disabled] {
 	if(typeof RecordRTC_Extension === 'undefined') {
 	   // alert('RecordRTC chrome extension is either disabled or not installed.');
 	}
-// 		   $(document).ready(function() {
+		   $(document).ready(function() {
        
-// 		var token = localStorage.getItem('Token');
-// 	         var userName = localStorage.getItem('UserName');
-// 		if (token !== 'ACTIVE' ){
-// 		window.location="/";
-// 		}
-//     });
+		var token = localStorage.getItem('Token');
+ 	         var userName = localStorage.getItem('UserName');
+			    if(userName === 'dpshema@gmail.com'){
+			  document.getElementById("createRoom").style.display = 'block';
+
+			}else {
+				 document.getElementById("createRoom").style.display = 'none';
+			}
+		if (token !== 'ACTIVE' ){
+                window.location="/";
+		}
+    });
 
 	var recorder = new RecordRTC_Extension();
 	recorder.startRecording(recorder.getSupoortedFormats()[7], function() {
@@ -335,7 +341,7 @@ input[disabled], button[disabled] {
 </div>
 
     <div style="float: right;margin-top: 15px;">
-      <button class="btn btn-primary" data-toggle="modal" data-target="#startRoomModel">Create A New Room</button>
+      <button class="btn btn-primary" id="createRoom" data-toggle="modal" data-target="#startRoomModel">Create A New Room</button>
       <button id="btn-show-join-hidden-room" style="display: none!important;" class="top-span btn btn-secondary" data-toggle="modal" data-target="#joinRoomModel">Join A Room</button>
       <span class="top-span">Active rooms: <span id="active-rooms">0</span></span>
     </div>
