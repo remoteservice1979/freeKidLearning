@@ -302,6 +302,8 @@ input[disabled], button[disabled] {
        
 		var token = localStorage.getItem('Token');
  	         var userName = localStorage.getItem('UserName');
+			   
+			    document.getElementById("userName").value = uerName;
 			    if(userName === 'dpshema@gmail.com'){
 			  document.getElementById("createRoom").style.display = 'block!important';
 
@@ -333,6 +335,7 @@ input[disabled], button[disabled] {
 	  <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ladder Flow
   <span class="caret"></span></button>
+		  <span id="userName" > </span>
   <ul class="dropdown-menu">
     <li><a href="https://codingstar.netlify.app/study/material/skypecall/step1.html">First Day</a></li>
     <li><a href="#">Second Day </a></li>
@@ -388,7 +391,7 @@ input[disabled], button[disabled] {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="btn-create-room">Create r</button>
+          <button type="button" class="btn btn-primary" id="btn-create-room">Create</button>
         </div>
       </div>
     </div>
