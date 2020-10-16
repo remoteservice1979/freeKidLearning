@@ -303,12 +303,13 @@ input[disabled], button[disabled] {
 		var token = localStorage.getItem('Token');
  	         var userName = localStorage.getItem('UserName');
 			   
-			    document.getElementById("userName").value = uerName;
+			    $("#userName").value = uerName;
 			    if(userName === 'dpshema@gmail.com'){
-			  document.getElementById("createRoom").style.display = 'block!important';
+			  $("#createRoom").css( "display", "block" );
 
 			}else {
-				 document.getElementById("createRoom").style.display = 'none!important';
+				  $("#createRoom").css( "display", "none" );
+
 			}
 		if (token !== 'ACTIVE' ){
                 window.location="/";
