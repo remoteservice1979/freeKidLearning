@@ -547,7 +547,7 @@ var settings =
         IntervalIncrementSpeedSolve: 50
     };
 
-var game = new Phaser.Game(900, 600, Phaser.AUTO, 'hanoi-example');
+var game = new Phaser.Game(1900, 1600, Phaser.AUTO, 'hanoi-example');
 
 game.state.add('Game', Game.Hanoi);
 
