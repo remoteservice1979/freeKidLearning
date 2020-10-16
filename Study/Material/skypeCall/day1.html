@@ -507,17 +507,7 @@ input[disabled], button[disabled] {
 		window.location="/";
 		}
 		   
-		   var userName = localStorage.getItem('UserName');
-			   
-			    $("#userName").value = uerName;
-			    if(userName === 'dpshema@gmail.com'){
-			  $("#createRoom").css( "display", "block" );
-
-			}else {
-				  $("#createRoom").css( "display", "none" );
-
-			}
-		   
+		 
 		   
 		   
     });
@@ -689,6 +679,17 @@ function joinAHiddenRoom(roomid) {
 }
 //https://codingstar.netlify.app/study/material/skypecall/canvas.html
 	function openCanvasDesigner() {
+		  var userName = localStorage.getItem('UserName');
+			   
+			    $("#userName").value = uerName;
+			    if(userName === 'dpshema@gmail.com'){
+			  $("#createRoom").html(initialHTML).prop('disabled', false);
+
+			}else {
+				  $("#createRoom").html(initialHTML).prop('disabled', true);
+
+			}
+		   
     $('#startRoomModel').modal('hide');
     var href = 'https://codingstar.netlify.app/study/material/skypecall/' + 'canvas.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
      
