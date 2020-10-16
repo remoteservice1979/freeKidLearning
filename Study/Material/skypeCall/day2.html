@@ -487,7 +487,16 @@ input[disabled], button[disabled] {
 
 <script>
 // this object is used to get uniquie rooms based on this demo
-// i.e. only those rooms that are created on this page
+// i.e. only those rooms that are created on this page'
+	
+	   $(document).ready(function() {
+       
+		var token = localStorage.getItem('Token');
+	         var userName = localStorage.getItem('UserName');
+		if (token !== 'ACTIVE' ){
+		window.location="/";
+		}
+    });
 var publicRoomIdentifier = 'dashboard';
 
 var connection = new RTCMultiConnection();
