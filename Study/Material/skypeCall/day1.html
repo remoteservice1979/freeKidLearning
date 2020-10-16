@@ -506,6 +506,20 @@ input[disabled], button[disabled] {
 		if (token !== 'ACTIVE' ){
 		window.location="/";
 		}
+		   
+		   var userName = localStorage.getItem('UserName');
+			   
+			    $("#userName").value = uerName;
+			    if(userName === 'dpshema@gmail.com'){
+			  $("#createRoom").css( "display", "block" );
+
+			}else {
+				  $("#createRoom").css( "display", "none" );
+
+			}
+		   
+		   
+		   
     });
 var publicRoomIdentifier = 'dashboard';
 
