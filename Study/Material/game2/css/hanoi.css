@@ -45,7 +45,7 @@ body {
 .disk {
   border: 1px solid black;
   background: blue;
-  height: 100px;
+  height: 40px;
   display: block;
   margin: auto;
 }
