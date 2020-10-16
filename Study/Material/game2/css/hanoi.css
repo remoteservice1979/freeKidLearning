@@ -66,9 +66,3 @@ body {
   background: yellow;
 }
 
-@media (max-width:600px) {
-    .pile-container {
-    width:60%;
-    height:80%
-}
-}
