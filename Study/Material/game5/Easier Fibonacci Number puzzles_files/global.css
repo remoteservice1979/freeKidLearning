@@ -1,0 +1,1176 @@
+BODY {background-color:white; font-family:Verdana,'Trebuchet MS', Lucida, Arial, Helvetica, sans-serif;line-height:150%;
+margin:1em 1em;}
+H1,H2,H3,H4,H5 {color:#C00;text-align:center;}
+.hTOC {color:#b00;text-align:center;font-size:120%; margin:2em 0px 2em 0px;}
+
+.dbg {colour:lightcoral;background-color:bisque};
+
+/* SUP {line-height:130%;position:relative;top:-0.15em;font-size:40%} (* top is half value for SUB *)  */
+.sub {line-height:140%;position:relative;bottom:-0.4em;font-size:80%;} 
+
+SUP        {vertical-align:baseline;font-size:80%;position:relative;top:-0.6em;}
+.supx      {vertical-align:baseline;font-size:70%;position:relative;top:-0.5em;}
+.up      {vertical-align:baseline;position:relative;top:-0.6em;}
+SUB     {vertical-align:baseline;font-size:80%;position:relative;bottom:-0.3em;}
+SUB.sublo  {vertical-align:baseline;font-size:80%;position:relative;bottom:-0.8em;}
+
+.tick::before {content:'\2714'; font-size:140%;color:limegreen}
+
+.normal {background-color:white; color:black; font-weight:normal; 
+        font-style:normal;font-family:Verdana,'Trebuchet MS', Lucida, Arial, Helvetica, sans-serif;}
+.norm {font-style:normal; color:#000; font-weight:normal;font-size:inherit;
+      font-family:Verdana,'Trebuchet MS', Lucida, Arial, Helvetica, sans-serif;}
+.pre {white-space:pre}
+    
+.symb {font-family:Times,'Times New Roman',serif;font-size:130%}
+.fracsym {font-size:120%} /* for / [ ] in fractions */
+.implies {line-height:100%;position:relative;bottom:-0.1em;font-size:180%;} /* for &rArr; */
+.arrsym  {line-height:120%;position:relative;bottom:0.6em;font-size:180%;}
+.nobg {background-image:none}
+
+.tri {color:#C00; font-family:"Verdana",'Courier New Italic','Courier New',monospace;}
+.paletri {color:#F69; font-family:"Verdana",'Courier New Italic','Courier New',monospace;}
+.newtri {color:#F33; font-style:italic;font-family:"Verdana",'Courier New Italic','Courier New',monospace;}
+.prim {color:maroon}
+.peri {color:#33F}
+.area {color:#F0C}
+.inrad {color:limegreen}
+.alth {color:goldenrod}
+.mn   {color:#F90}
+.prod {color:#C00}
+.xcess,
+.diff {color:#0DD}
+
+
+TABLE.resTBL {color:inherit;overflow:auto;white-space:nowrap;
+    border-spacing:0px;border-collapse:collapse;font-size:inherit}
+TABLE.resTBL tr th {padding-right:2px}
+/* TABLE.resTBL tr td:first-of-type {padding-left:2px;border-left:1px solid silver} */
+TABLE.resTBL tr td {padding:0px}
+.hideoflow {overflow:hidden}
+
+.fareySTY {background-color:linen}
+.sbSTY {background-color:bisque}
+.exprSTYbg  {background-color:#FFF0FF;}
+.exprBORDER {border:2px solid #FFF0FF}
+.exprSTY {color: orangered}  
+.exprLabelSTY {color:#EB33FF;text-align:center}
+.inputSTYbg {background-color:#FC6}
+.cfSTYbg   {background-color:#FFF4ED} /* fade to CEEAEE */
+.cfSTY {color:red;border-color:red}
+.cfSTYborder {border-color:#C6C}
+.decSTYbg  {background-color:#E6F5FF}
+.nbSTY,
+.decSTY {color:blue}
+.setlistSTY {color:darkorange}
+.countSTY {color:#CCC;}
+.sumSTY {color:limegreen}
+.nondecSTY,
+.baseSTY,
+.newbaseSTY {color:#0C0} /* near cadetbluw */
+.baseSTY0 {color:#F00}
+.baseSTY1 {color:#0C0;}
+.baseSTYbg,
+.newbaseSTYbg {background-color:mistyrose}
+.indexSTY,
+.indSTY {color:tan;font-style:italic}
+
+.posSTY0,
+.posSTY {color:tan;font-style:italic}
+.posSTY::before{content:"#"}
+
+
+.fractSTYbg {background-color:#E9FFE6}
+.fractSTY {color:#009614;}
+
+.quadSTYbg {background-color:#FFF6DB}  /* #F8FFF7} */
+.quadSTY {color:#FFA900}
+
+.decfractSTYbg {background:linear-gradient(to   top,#B0DFFF,#B0DFFF 35%,#AEFFA2 65%,#AEFFA2)} /* background: linear-gradient(to bottom,#C1FFBE,#C1FFBE 35%,#B6E2FF 65%,#B6E2FF)} */
+.decfractSTYbgH {background:linear-gradient(to   right,#B0DFFF,#B0DFFF 35%,#AEFFA2 65%,#AEFFA2)} /* background: linear-gradient(to bottom,#C1FFBE,#C1FFBE 35%,#B6E2FF 65%,#B6E2FF)} */
+.deccfSTYbg   {background:linear-gradient(to  right,#B0DFFF,#B0DFFF 35%,#FFC9A7 65%,#FFC9A7)} /* background: linear-gradient(to right,#B6E2FF,#B6E2FF 35%,#FFEABF 65%,#FFEABF)} */
+.fractcfSTYbg  {background:linear-gradient(to right,#AEFFA2,#AEFFA2 35%,#FFC9A7 65%,#FFC9A7)} /* background: linear-gradient(to right,#C1FFBE,#C1FFBE 35%,#FFEABF 65%,#FFEABF)} */
+.exprdecSTYbg  {background:linear-gradient(to   top,#FFB8FF,#FFB8FF 35%,#B0DFFF 65%,#B0DFFF)} /* background: linear-gradient(to top,#F4A4FF,#F4A4FF 35%,#B6E2FF 65%,#B6E2FF)} */
+.fractquadSTYbg {background:linear-gradient(to  top,#AEFFA2,#AEFFA2 35%,#FFE38E 65%,#FFE38E)}
+.decquadSTYbg {background:linear-gradient(to right,#B0DFFF,#B0DFFF 35%,#FFE38E 65%,#FFE38E)}
+
+.fractLabelSTY {color:mediumseagreen;text-align:center}
+.precisionSTY {color:darkviolet}
+.LRpathSTY {color:red;font-weight:bolder}
+.partcombSTY {background-color:aquamarine}
+.reslinediv {display:table-cell;vertical-align:top}
+
+
+.padR {padding-right:0.5em}
+
+TABLE TD.counter {font-style:italic;color:silver}
+
+INPUT[type=text] {border:2px solid #EEE;font-size:inherit}
+
+INPUT[type=button].showhidebtnsmall:active 
+   {background-color:#Faf3e4;
+    color:orange;box-shadow:2px 2px 2px #EEE;border-style:inset}
+INPUT[type=button].showhidebtnsmall:hover
+   {background-color:orange;color:#Faf3e4; }  
+BUTTON,
+INPUT[type=button]{ font-family:'Andale Mono',Verdana,Arial,Monaco,monospace; 
+   background-color:seashell;color:inherit; font-size:inherit;
+   border-style:outset; border-width:2px; border-radius:8px; border-color:silver;margin:0px;padding:0.1em 0.7em}
+
+SELECT { background-color:#FCFCFC; border-style:outset; }
+SELECT:hover,
+BUTTON:hover,
+INPUT[type=button]:hover  {cursor:pointer;  border-style:inset; background-color:#AAA; color:seashell} 
+
+BUTTON:active, 
+INPUT[type=button]:active  {cursor:wait; color:gold}
+  
+BUTTON.pushme {color:magenta; background-color:yellow;border:2px solid magenta}
+
+INPUT[type=button].shadow,
+.shadow,
+BUTTON.shadow {font-family:'Andale Mono',Verdana,Arial,Monaco,monospace; 
+   margin:2px;padding:1px 3px;
+   box-shadow:2px 3px 3px #888;}
+.shadow:active,
+INPUT[type=button].shadow:active,
+BUTTON.shadow:active   {cursor:wait; color:gold;box-shadow:0px 1px 1px #666;transform: translateY(2px);}
+
+.clear,
+BUTTON.clear,
+INPUT[type=button].clear,
+INPUT[type=reset]      
+       {background-color: white; color:inherit;
+        border:1px solid  #EEE;
+        margin:3px;  /* for the shadow! */
+        text-transform:uppercase;
+        padding:0 0.7em;
+        box-shadow:2px 3px 3px #888;}
+        
+.clear:hover,
+BUTTON.clear:hover,
+INPUT[type=button].clear:hover,
+INPUT[type=reset]:hover {background-color:white;color:black;box-shadow:none}
+        
+INPUT.btn     {color:blue;}
+INPUT.infobtn {text-shadow: -1px -1px white, 1px 1px #333;color:#CCC;   background-color:#33F; 
+               font:100% 'Times New Roman',Times,Palatino,serif;padding:0px;width:1.5em}
+INPUT.action {background-color:#FF9;padding:3px;color:#993}
+left,
+INPUT.left {text-align:left}
+right,
+INPUT.right {text-align:right}
+center,
+INPUT.center {text-align:center}
+
+BUTTON.more,
+INPUT[type=button].more,
+BUTTON.less,
+INPUT[type=button].less {border:0px;color:blue;background-color:inherit;font-size:100%;
+  }
+BUTTON.more:after,
+INPUT[type=button].more:after {content:"\25e2"; color:#8060ff; /* down tri is \25bc or se triangle is \25e2 */
+  display:inline-block;font-size:100%;margin-left:0.3em;
+  } /* up triangle is \25b2 */
+
+BUTTON.less:after,
+INPUT[type=button].less:after {content:" \25e4";  color:#8060ff; /* up tri is \25b2 or ne triangle \25e4 */
+  display:inline-block;font-size:100%;margin-left:0.3em;}
+
+BUTTON.txt:hover,
+INPUT[type=button].txt:hover {background-color:lightcoral;}
+
+.hide { /* https://jsfiddle.net/ProLoser/nurx8/ */
+    overflow: hidden;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.show {
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+.showhidespn {color:white;font-style:italic;font-weight:bolder;padding:2px 4px 1px 2px;background-color:silver;}
+.showhidespn:hover {cursor:pointer;background-color:gold}
+
+
+.showhideSPAN,  /* Use for SPAN "button" for down/up arrows, shadowed*/
+.showhidespan {color:chocolate;/*font-style:italic; border-width:0px 1px 0px 1px;border-style:dotted; border-color: teal;*/
+               /* text-decoration:underline chocolate;background-color:#FFF4F4; */
+               box-shadow:0px 2px #987;
+              /*  border-left:1px dotted chocolate;border-right:1px dotted chocolate;border-top:1px dotted chocolate; */
+                padding:2px 4px 0px 2px; /* border:1px dotted chocolate; */
+               }
+.showhideSPAN:hover,
+.showhidespan:hover {cursor:pointer; color:white;background-color:chocolate;box-shadow:none}
+
+.showhideSPAN:after,
+.showhidespan:after {content:"..."}
+
+.hiddenspanDIV {color:chocolate;  display:none;    padding:2px 4px 1px 2px;
+          box-shadow:5px 5px 19px -5px  #987; /* border:1px dotted #987; */
+             }
+.more {}
+.more:after {content:"\25BC"}  /* HTML &#9660; */
+
+.less {}
+.less:after {content:"\25B2"}  /* HTML &#9650; */
+
+.showhidebtn {color:#954; border:2px solid #DA7; background-color:#FEE;
+   /* font-family:Arial,Verdana,Helvetica,sans-serif; */
+   font-family:Courier, Monaco,monospace;
+   /* padding:0.2em; */
+   margin:0em 0px 0px 3em;
+   font-size:100%;text-align:center;font-stretch:expanded}
+
+   
+.showhidebtnsmall {color:#888;  background-color:#Faf3e4;
+   /* font-family:Arial,Verdana,Helvetica,sans-serif; */
+   font-family:Courier, Monaco,monospace;
+   padding:1px; border:2px outset #987;
+   font-size:80%;text-align:center;font-stretch:expanded;
+   box-shadow:2px 2px 2px #987;
+   margin:0px}
+
+.showhidebtnblue {color:slateblue;  background-color:aliceblue;
+   /* font-family:Arial,Verdana,Helvetica,sans-serif; */
+   font-family:Courier, Monaco,monospace;
+   padding:1px; border:2px outset #987;
+   font-size:80%;text-align:center;font-stretch:expanded;
+   box-shadow:2px 2px 2px #987;
+   margin:0px}
+.showhidebtnTTD {color:lightseagreen;  background-color:#DBFFFF;
+   /* font-family:Arial,Verdana,Helvetica,sans-serif; */
+   padding:1px 3px; border:2px outset silver;
+   font-size:90%;text-align:center;font-stretch:expanded;
+   box-shadow:2px 2px 2px lightseagreen;
+   margin:0px 3px}
+.showhidebtnplain { 
+   /* font-family:Arial,Verdana,Helvetica,sans-serif; */
+   padding:1px 3px; border:2px outset silver;
+   font-size:90%;text-align:center;font-stretch:expanded;
+   box-shadow:2px 2px 2px #CCC;
+   margin:0px 3px}
+
+.showhidebtntxt {color:darkred; 
+   padding:1px; 
+   border:2px solid darkred;
+   margin:0px; 
+   font-family:Courier, Monaco,monospace;
+    font-size:80%; text-align:center;}
+    
+.hiddeninfo {    
+   color:darkred; border:1px dotted chocolate;å
+               /* border:1px dotted silver;background-color:#FFF4F4; */
+   padding:0px 5px 0px 5px;
+   margin:0px auto 8px 8px; 
+   display:none;}
+.hiddeninfoX {   border:1px dotted silver; /* background-color:seashell; color:darkred;*/
+   padding:0px 5px 0px 5px;
+   margin:0px auto 8px 8px; 
+   display:none;}
+.hiddeninfoTTD { border:1px dotted silver; background-color:#EFF;  /* #EFF or #2A2; */
+   padding:0px 5px 0px 5px;
+   margin:0px auto 8px 8px; 
+   display:none;}
+.hiddeninfoplain { border:1px dotted silver; 
+   padding:0px 5px 0px 5px;
+   margin:0px auto 8px 8px; 
+   display:none;}
+.hiddeninfospan {  border:1px dotted silver;
+    color:chocolate;
+   padding:0px 5px 0px 5px;
+   margin:0px auto 8px 8px; 
+   display:none;}
+.hiddeninfo0 {  border:1px dashed silver;
+   background-color:inherit; color:darkred;
+   padding:0px 5px 0px 5px;
+   margin:0px 8px 8px 8px; 
+   display:none;}
+   
+.hiddeninfoblue,
+.hiddeninfo1 {  border:1px dashed silver;
+   background-color:aliceblue; color:slateblue;
+   padding:8px;
+   margin:3px 0px 3px 20px; 
+   display:none;}
+.hiddeninfo2 {  
+   background-color:ivory; color:darkred;
+   padding:2px 5px 2px 5px;
+   margin:0px 0px 8px 8px; 
+   display:none;}
+.hiddeninfoplain {  border:1px dotted silver;
+  margin-left:2em;
+   display:none;}
+.info1 {background-color:#F0F8FF}
+.displaynone {display:none}
+
+.dottedul {text-decoration:underline  dashed blue}
+.blink {animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;}
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; } }
+
+TABLE.morecellpadding tr td {padding:8px}
+.padding3 {padding:3px}
+
+TABLE tr td.cellpadding3,
+TABLE.cellpadding3 tr td {padding:3px}
+
+TABLE.scroll thead {table-layout:fixed;}
+TABLE.scroll tbody {width:100%;overflow:auto}
+
+.hiliteRADSTY {color:black;}
+.loliteRADSTY {color:white;}
+
+DIV.narrow {margin-left:auto;margin-right:auto;}
+DIV.narrowR {margin-right:auto}
+
+DIV.pre {white-space:pre;
+         font-family:Verdana Monaco,monospace;}
+DIV.middle /* Make contents central vertically in container which is position:relative*/
+     {position:absolute;top:0;transform:translate(0,50%)}
+
+#helpDIV { display:none;
+          position:fixed;top:0;height:auto;left:25%;right:25%;
+          background-color:lightyellow;
+          border:2px solid orange;
+          padding:4px;
+          z-index:2;
+          }
+#helpDIV table td {border:0px}
+
+.floatR {float:right}
+.floatL {float:left}
+.clearall {clear:both}
+.clearR {clear:right}
+.clearL {clear:left}
+
+
+FORM TEXTAREA {resize:both; }
+
+A:link {color:#00E;}
+A:visited {color:#808;}
+A:hover {color:orange;}  /* must be AFTER link and visited but BEFORE active */
+A:active {color:red;}
+
+A.pale {color:#CCC;}
+A.newwin::after  /*{content:"\279a";display:inline-block;color:orange;border:1px solid orange}*/
+  {content:url('images/in_new_window.gif');padding-left:0.3em} /*or nE arrow \2197 */
+
+
+
+UL.contentsl1 A:link      {font-weight:bolder;}
+UL.contentsl1 A:visited   {font-weight:bolder;color:navy;background-color:white;}
+UL.contentsl1 {list-style-image:url(images/redsq.gif);list-style-type:disc;
+   color:#666;padding:0px; margin-left:3em;line-height:140%}
+
+UL.contentsl2 A:link       {font-weight:normal;}
+UL.contentsl2 A:visited   {font-weight:normal;color:navy;}
+UL.contentsl2 {list-style-image:url(images/goldsq.gif);list-style-type:square;
+   color:#666;padding:0px; margin-left:3em;line-height:140%}
+
+UL.contentsl3 A:link       {}
+UL.contentsl3 A:visited   {color:navy;background-color:white;}
+UL.contentsl3 {list-style-image:url(images/greensq.gif);list-style-type:circle;
+   font-size:95%;color:#666;padding:0px;margin-left:3em;line-height:140%}
+
+UL.contentsl4 A:link       {}
+UL.contentsl4 A:visited   {color:navy;}
+UL.contentsl4 {list-style-image:url(images/bluesq.gif);list-style-type:circle;
+   font-size:95%;color:#666;padding:0px;margin-left:3em;line-height:140%}
+
+
+UL.contentsCalc {list-style-image:url(images/calcicon.gif);list-style-type:circle;
+   font-size:95%;color:#666;font-style:italic;}
+   
+div.blockquote,
+blockquote {
+  font-family:Palatino,"Palatino Linotype","Times New Roman",serif;
+  background-color: seashell;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+   padding: 8px;
+  margin: 2% 12% 2% 5%;}
+  
+blockquote.lit {
+  font-family:serif;font-size:120%;
+  font-style:italic;
+  line-height:130%;
+  padding: 8px;
+  background-color: linen;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 2% 12% 2% 5%;
+  }
+blockquote.maths {
+  color:mediumblue;font-family:inherit;
+  background-color: #f4f4fd;
+  border-top: 1px solid #b6b6f1;
+  border-bottom: 1px solid #b6b6f1;
+   padding: 8px;
+  margin: 2% 12% 2% 5%;}
+/* blockquote:before { content: open-quote; font-weight: bold; } */
+/* blockquote:after { content: close-quote; font-weight: bold; } */
+
+.spaced {letter-spacing:0.7em}
+
+
+.radic  {font-family:Arial,sans-serif;font-size:110%}
+.radic0 {font-family:Arial,sans-serif;font-size:100%}
+.underline, 
+.u       {border-bottom-width:1px;border-bottom-style: solid;border-color:currentColor}
+.uline   {border-bottom-width:1px;border-bottom-style: solid;border-color:black}
+.uu,
+.doubleunderline {border-style:none;border-bottom-style:double;border-color:black}
+
+HR.hru    {height:1px;border-top:1px solid blue;border-bottom:0px;margin:1px;padding:0px;color:blue;background-color:blue}
+HR.silver {height:1px; border:0px;border-top:1px solid silver;margin:2px 0px;padding:0px}
+HR.dotted {height:1px; border:0px;border-top:1px dotted black;margin:2px 0px;padding:0px}
+
+.u2       {border-bottom:3px solid black;}
+.l       {border-left:1px solid black}
+.overline, 
+.overbar,
+.celloverline {border-top:1px  solid currentColor;line-height:150%;margin-left:0px;padding-left:0px}
+/* NOT Safari 9.0.2??  {text-decoration-line:overline;text-decoration-style:solid;text-decoration-color:black;}*/
+.inline {display:inline-block}
+
+U {text-decoration-line:underline;text-decoration-style:solid;text-decoration-color:currentColor;}
+
+
+.floorSTY {font-style:normal;font-size:170%; color:currentColor}
+
+.question {text-align:center;color:#960;background-color:white;font-style:italic;margin-bottom:10pt;margin-top:10pt;}
+
+.Zbagfreq {color:red}
+
+UL {margin-left:0px;}
+
+OL.typelowera {list-style-type: lower-alpha;}
+OL.typeupperA {list-style-type: upper-alpha}
+OL.type1      {list-style-type: decimal}
+OL.typeloweri {list-style-type: lower-roman}
+OL.typeupperi {list-style-type: upper-roman}
+
+DL.list DT {font-weight:bolder; color:#999;padding-top:1em;}
+DL DD {color:black}
+
+DL.greenbead DT::before {content:url(images/beadgreen.gif)}
+DL.greenbead DT {color:#0C0;font-weight:bolder}
+DL.greenbead DD {padding-left:15px;}
+
+DL.pearlbead DT::before {content:url(images/beadpearl.gif)}
+DL.pearlbead DT {color:#0C0;font-weight:bolder}
+DL.pearlbead DD {padding-left:15px}
+
+DL.redbead DT {color:#900;font-weight:bolder}
+DL.redbead DT::before {content:url(images/beadred1.gif)}
+DL.redbead DD {color:black;font-weight:normal}
+
+DL.jadebead DT {color:#900;font-weight:bolder}
+DL.jadebead DT::before {content:url(images/beadjade.gif)}
+DL.jadebead DD {color:black;font-weight:normal}
+
+DL.goldbead DT {color:orange;font-weight:bolder}
+DL.goldbead DT::before {content:url(images/beadgold.gif)}
+DL.goldbeadonly DT::before {content:url(images/beadgold.gif)}
+DL.goldbead DD {color:black;font-weight:normal}
+
+DL.nogap {margin-top:0px;padding-top:0px;margin-bottom:0px;padding-bottom:0px}
+
+.ttl {color:red;background-color:transparent;text-align:center;font-weight:bolder;font-size:larger;}
+
+.big {font-size:170%}
+
+.nonb {font-weight:normal}
+
+.popup {background-color:#3CF;text-align:left;border:2px solid black;padding:5px;position:relative;z-index:13;display:none;
+        font-size:70%;color:#006}
+.popupwin {background-color:#33C;text-align:left;font-size:90%;color:#FFF}
+/* use as <span data-descr="text to show in popUp">text to hover over</span> */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::after 
+    span[data-descr] {
+        position: relative;
+        text-decoration: underline;
+        color: #00F;
+        cursor: help;
+    }
+
+    span[data-descr]:hover::after {
+        content: attr(data-descr);
+        position: absolute;
+        left: 0;
+        top: 24px;
+        min-width: 200px;
+        border: 1px solid #AAA ;
+        border-radius: 10px;
+        background-color: #ffffcc;
+        padding: 12px;
+        color: #000000;
+        font-size: 14px;
+        z-index: 1;
+    }
+*/    
+
+.popup1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup1 .popup1text {
+    visibility: hidden;  width:100%;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup1 .popup1text::after {
+    content: "";
+    position: absolute; overflow:scroll;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup1 .show {
+    visibility: visible;
+}
+
+/*  <div class=popup1 ><button class=popup1  onClick="popup1toggle('fib1TtreeHELPdiv')" >?</button>
+      <div class=popup1text id='fib1TtreeHELPdiv' style="width:30em;background-color:white;color:black">
+Starting from "1" we add 1 or T on the right and show the fib1T string and its integer value. <br>
+Each row adds one more bit on the right to the bits above.
+</div></div>
+  ---
+  global.js   popup1toggle(id) ---  
+*/
+
+
+
+.newprime {color:#0C0;background-color:white;}
+.prime    {color:#F33;background-color:white;}  /* in fibtable HTML and fibMaths and fibCalc and factors*/
+.notprime,
+.comp     {color:#33C;}
+.untestedprime {font-style:italic; color:red}
+
+.cancel, 
+.strike, 
+.xout    {text-decoration:line-through;}
+
+
+.greenHilite {background-color:#090;color:white}
+
+.orange  {color:#FC0;font-weight:bolder;}
+.red     {color:#F30;font-weight:bolder;}
+.magenta {color:#F0F;font-weight:bolder;}
+.mauve,
+.purple  {color:#939;font-weight:bolder;}
+.brown   {color:#900;font-weight:bolder;}
+.blue    {color:#60F;font-weight:bolder;}
+.green   {color:#3C0;font-weight:bolder;}
+.lime    {color:lime;font-weight:bolder;}
+.cyan    {color:#0FF;font-weight:bolder;}
+.jade    {color:#3C6;font-weight:bolder;}
+.plum    {color:#C36;font-weight:bolder;}
+.skyblue {color:#36C;font-weight:bolder;}
+.yellow,
+.gold    {color:#FF3;font-weight:bolder;}
+
+
+.orangecol  {color:#FC0;}
+.redcol     {color:#F30;}
+.magentacol {color:#F0F;}
+.purplecol  {color:#939;}
+.browncol   {color:#900;}
+.bluecol    {color:#60F;}
+.greencol   {color:#3C0;}
+.limecol    {color:lime}
+.cyancol    {color:#0DD;}
+.jadecol    {color:#3C6;}
+.plumcol    {color:#C36;}
+.skybluecol {color:#36C;}
+.yellowcol,.goldcol   {color:#FF3;}
+.black   {color:black;}
+.silver  {color:#CCC;}
+.grey, .gray    {color:#999;}
+.darkgrey, .darkgray {color:#666;}
+.black   {color:black}
+.white {color:white}
+
+.redyell {color:red;font-weight:bolder;background-color:yellow;}
+
+.tt {font-family:Courier,monospace;}
+.ttblue {color:blue;font-family:Courier,monospace;}
+.ttmagenta {color:#F0F;font-family:Courier,monospace;}
+.ttred {color:red;font-family:Courier,monospace;}
+.ttgreen {color:green;font-family:Courier,monospace;}
+
+
+.nbHR {color:#900;font-family:Courier,Monaco,monospace;background-color:#FF9;}
+.index {font-style:italic;}
+.paleindex {font-style:italic;color:#999;}
+.count {font-style:italic;color:silver;font-size:90%}
+.index1 {font-style:italic;font-size:smaller;color:#999}
+
+.center, .centered {text-align:center;}  
+.centerPage,.centerpage, .centrepage, .centrePage  {margin-left:auto;margin-right:auto}
+.box {border:1px solid #99F;text-align:center;padding:3px}
+.boxblk    {border-width:1px;border-style:solid;border-color:#CCC;
+            margin:10px 6% 10px 6%;padding:10px;}
+.boxblkcol {margin:10px 6% 10px 6%;padding:10px;color:#333;
+    background-color:#FEE;}
+.aside {margin:10px 6% 10px 6%;padding:10px;color:#333;font-size:90%;border:1px dotted silver}
+
+.bold {font-weight:bolder}
+.coords {font-family:monospace;font-size:smaller}
+.eulerstats {font-weight:bolder}
+/* .bkt {font-family:Symbol;font-size:300%;} */
+.bkt {font-size:250%; font-family:Baskerville,"MMa Textbook","MMTextbook",Optima,sans-serif;padding:1px;font-style:normal}
+
+.rulebg {background-color:#ffe4e1;}
+.rule {text-align:center;color:firebrick;background-color:#ffe4e1;
+        display:table;margin:0 auto;padding:4px 15px 4px 15px;
+        font-family:Verdana, Arial,  sans-serif;font-size:100%;}
+.rulebox {text-align:center;background-color:#3FF;padding:12px; color:#093;
+       margin-bottom:14pt;margin-top:14pt;font-family:Verdana, Arial, 
+       sans-serif;border:#093 solid 2px;}
+.indentrule {color:#093;font-family:Verdana, Arial, sans-serif;margin:3% 3% 3% 5%;font-size:100%;}
+.indent {margin-left:5%}
+.indentboth {margin-left:5%;margin-right:5%}
+.indenttt {margin:1% 1% 1% 5%;font-family:Courier,monospace}
+.indentpad {margin-left:5%; padding:1em}
+
+
+.equnname {color:#8F13FF;font-family:'Courier New',Courier, Monaco,monospace;font-weight:bold}
+
+.m {color:blue; font-family:Verdana,Monaco, Courier, monospace; }
+.m1 {color:blue; font-family:Verdana,Monaco, Courier, monospace; font-size:90%}
+.mathcol {color:blue;}
+.mathbg {background-color:#00F;}
+.math, 
+.maths    {font-family:Palatino,"Palatino Linotype","Times New Roman",serif;font-size:120%;
+  color:mediumblue; 
+  border-color:darkslateblue}  /* for .matrix */
+.math b,
+.maths b {font-size:110%}
+.math0,
+.maths0   {font-family:Palatino,"Palatino Linotype","Times New Roman",serif;color:darkslateblue; 
+  border-color:#00F}
+.mathnocol   {color:inherit         }
+.math1    {font-family:Palatino,"Palatino Linotype","Times New Roman",serif;color:darkslateblue;
+ border-color:#00F }
+.nomaths,
+.nomath {font-size:90%;color:black;font-family:Verdana,'Trebuchet MS', Lucida, Arial, Helvetica, sans-serif;font-style:normal}
+.mathsym  {font-family:Palatino,"Palatino Linotype","Times New Roman",serif;color:inherit; font-size:120%;line-height:140%;font-style:normal;}
+.mathsymbig{font-family:Palatino,"Palatino Linotype","Times New Roman",serif;color:inherit; font-style:normal;
+       font-size:240%;line-height:90%;color:mediumblue}
+/* Use &Phi; and &phi;= &#981; for small  phi 
+/*  &phiv; &phivar; fail Validator
+   ARIAL or VERDANA from here:
+	<span style="font-family:'Palatino Linotype'">&phi;</span><br>
+	<span style="font-family:Times ">&phi;</span><br>
+	<span style="font-family:'Times New Roman'">&phi;</span><br>
+	<span style="font-family:Symbol">&phi;</span><br>
+	<span style="font-family:Verdana">&phi;</span><br>
+	<span style="font-family:Courier">&phi;</span><br>
+	<span style="font-family:Helvetica">&phi;</span><br>
+	<span style="font-family:Arial">&phi;</span><br>
+	<span style="font-family:'Lucida Sans Unicode'">&phi;</span><br>
+	<span style="font-family:Geneva">&phi;</span><br>
+	<span style="font-family:Trebuchet">&phi;</span><br>
+	
+	 <span style="font-size:120%">&#8469;</span>    Nat Nbs N
+*/
+
+.num {vertical-align:super;font-size:80%}
+.den {vertical-align:sub;font-size:80%}
+
+
+.calc {background-color:lemonchiffon;color:#C00;border:2px  solid silver;
+   /*  max-width:100%; *//* DONT include scroll here - just in .res! */
+    font-family:Verdana,Helvetica,sans-serif;
+    white-space;nowrap;
+    margin:5px;padding-left:3px;padding-right:3px;}
+.calcbg    {background-color:lemonchiffon;}
+.calctitle {background-color:#FFFA95;padding-right:0.5em;color:#C00} /* border:1px #C90 solid; */
+.calctitle::after {content:url('images/calcicon.gif')}  
+
+.calcborder {border:2px solid  silver;}
+TABLE.calcborder tr  td{border:2px solid  #EEC699;}
+.calcouterborder {border:2px solid  #EEC699;}
+.calcbgrow {border-left:2px solid lemonchiffon;border-right:2px solid lemonchiffon;
+            border-top:2px solid #EEC699;border-bottom:2px solid #EEC699} /*for a blank row */
+.calcbgtext {color:#C63}
+.calctxt {font-family:Verdana,Helvetica,sans-serif;color:#C63;}      
+.resSPACEbtn ,
+.calcinner {background-color:#ffd;color:#C63;
+    font-family:Verdana,Helvetica,sans-serif;}
+.calccolor {color:#C63}
+
+.res {border:1px solid #EEC699;    height:15em;   width:100%; overflow:scroll; resize:vertical; 
+    text-align:left;font-family:Verdana,Monaco,Courier,monospace;
+       background-color:white;padding:2px;margin-right:8px;
+       color:mediumblue;  }
+.resmono {border:1px solid #EEC699;    height:15em;   width:100%; overflow:scroll; resize:vertical; 
+    text-align:left;font-family:Monaco,monospace;
+       background-color:white;padding:2px;margin-right:8px;
+       color:inherit;  }
+.restext {font-family:Courier,'Courier New',Monaco,monospace;
+       background-color:ivory;color:maroon}
+.resbg {background-color:ivory;color:maroon}
+BUTTON.resBTN {background-color: lemonchiffon;border-color: #EEC699;color:lemonchiffon;box-shadow:2px 3px 3px #888;
+        padding:5px 2px;margin:0 3px}
+INPUT[type=button].resBTN:active,
+BUTTON.resBTN:active   {cursor:wait; color:gold;box-shadow:0px 1px 1px #666;transform: translateY(2px);}
+ 
+.fromrat,
+.calcorange {background-color:#FC6}    
+.calcrose {background-color:indianred}
+.calcplum {background-color:plum}
+.calcorchid {background-color:orchid}
+.calcsalmon {background-color:salmon} /* #E68EA3} */
+.calcdarksalmon {background-color:darksalmon}
+.calcsandybrown {background-color:sandybrown}
+.calclightrose {background-color:lightcoral}
+.calclightsalmon {background-color:lightsalmon} /* #EBC */
+.calcbrown {background-color:#C96;}
+.calcchocolate {background-color:chocolate} /* #D61 */
+.calcred   {background-color:#F66}    
+.fromdec,
+.calcpeach {background-color:#F99}
+.calcorange {background-color:orange}
+.calccyangreeny  {background-color:#9FC}
+.calccyan {background-color:#0FF}
+.calccyandark {background-color:#0CC}
+.calcjade  {background-color:#6F9}
+.calclavender {background-color:lavender}
+.calcolive {background-color:olive}
+.calckhaki {background-color: darkkhaki} /* #9F9F6F */
+.calckhakilite ,
+.calclightkhaki{background-color:khaki} /* #CCC66C */
+.calcsandybrown {background-color:sandybrown}
+.calclightgreen {background-color:lightgreen}
+.calcolivelite {background-color:#CC9}
+.calcquartz {background-color:#CCF}
+.calcturquoise {background-color:#CFF}
+.calcgreen {background-color:#600}
+.calcgold {background-color:#FD4}
+.calcpink  {background-color:#E68EA3}
+.fontpink  {color:#F69}
+.calcmauve {background-color:#C6F}
+.calcblue  {background-color:cornflowerblue} /* #69F */
+.calclightblue {background-color:#6CF}
+.calcskyblue {background-color:#39C}
+.calcsteelblue {background-color:#36F}
+.calccornflowerblue {background-color:#69F}
+.calclightmagenta {background-color:#F6F}
+.fontblue  {color:#69F}
+
+
+TABLE.calcnav {border-collapse:collapse; margin-left:auto;margin-right:auto;margin-top:2px;margin-bottom:2px;
+    font-family:Verdana,Helvetica,sans-serif;font-size:80%;vertical-align:middle;
+    border:1px solid #C90;background-color:moccasin}
+table.calcnav tr {line-height:160%;}
+table.calcnav td,
+table.calcnav th {border-right:1px solid #C63;border-left:1px solid black;padding:0px 6px 6px 6px;vertical-align:middle}
+table.calcnav A:link {color:#C63; text-decoration:none}
+TABLE.calcnav A:visited {color:#C63}
+TABLE.calcnav A:hover {background-color:#C63;color:lemonchiffon}
+TABLE.calcnav A:active {color:green}
+TABLE.calcnav A.pale:link,
+TABLE.calcnav A.pale:visited,
+TABLE.calcnav A.pale:active,  
+TABLE.calcnav A.pale:hover {color:#CCC;background-color:inherit}
+
+TABLE.cellpad tr th,
+TABLE.cellpad tr td {padding:3px}
+TABLE.cellpad1 tr th,
+TABLE.cellpad1 tr td {padding:1px}
+
+/* TABLE.biblio {align:left;text-align:left;}
+   TABLE.biblio TD {align:left;text-align:left;vertical-align:top;} */
+TABLE TD.icon {text-align:center;vertical-align:top;}
+TABLE.addr {width:100%;}
+TABLE.lalign,
+TABLE.lalign TR TD {text-align:left;}
+
+TABLE.ralign TR TD,
+TABLE TR.ralign TD,
+TABLE TR TD.ralign {text-align:right;}
+TABLE.calign TR TD,
+TABLE TR.calign TD,
+TABLE TR TD.calign {text-align:center;}
+
+TABLE TR TH.rowline,TD.rowline {border-bottom:1px solid gray;}
+
+TABLE.slim {border-collapse:collapse; border:0px;border-spacing:0px}
+TABLE.slim TR TD,
+TABLE.slim TR TH  {padding:0px}
+
+TABLE.vtop TR TD,
+TABLE TR.vtop TD,
+TABLE TR TD.vtop {vertical-align:top}
+
+TABLE.vmid TR TD,
+TABLE TR.vmid TD,
+TABLE TR TD.vmid {vertical-align:middle}
+TABLE TR TD.tdmiddle {position: relative; top: 50%; transform: translateY(-50%);} 
+
+TABLE.vbot,
+TABLE.vbot TR {vertical-align:bottom}
+TABLE.vbot TR TD {vertical-align:bottom}
+.vbot {vertical-align:bottom}
+.vmid {vertical-align:middle}
+TABLE TR TD.hcent {text-align:center}
+
+table.colborders {border-collapse:collapse}
+table.colborders tr td,
+table.colborders tr th {border-right:1px solid silver;border-left:1px solid silver}
+
+table.nocolborders tr td,tr th,
+table tr td.nocolborders
+   {border-right:0px;border-left:0px}
+
+table.colRborder {border-collapse:collapse}
+table.colRborder th,
+table.colRborder td {border-right:1px solid silver;padding:0px 0.5em 0px 0.5em}
+
+
+table.rowborders, table.rowborders tr, 
+table.rowborder, table.rowborder tr,
+table tr.rowborders, 
+table tr.rowborder
+ {border-bottom:1px solid silver;border-top:1px solid silver;border-left-width:0px;border-right-width:0px;
+  cellpadding:3px; margin:0px}
+
+table tr td.noRborder {border-right:0px}
+table tr td.noLborder {border-left:0px}
+
+paleBorder,
+paleBorders {	border: 1px solid silver }
+	
+table.paleBorder,
+table.paleBorders {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #DDD;
+	border-collapse:collapse;  
+	}
+table.paleBorder tr.u td,
+table.paleBorders tr.u td {border-bottom:1px solid black; }
+
+table.paleBorder th,
+table.paleBorder caption,
+table.paleBorders th,
+table.paleBorders caption   {
+	border-width: 1px;
+	border-style:solid;
+	border-color: #BBB;
+	/* border-collapse:collapse; */
+	/* padding:2px; */
+	empty-cells:show
+}
+table.paleBorder td,
+table.paleBorders td {
+	border-width: 1px;
+	border-style:solid;
+	border-color: #DDD;
+	/* border-collapse:collapse; */
+
+	empty-cells:show
+}
+table.paleBorder tr td table {border:0px}
+table.paleouterborder {border:1px solid #DDD;}
+
+
+.noborder,
+.noborders
+table.noborder,
+table.noborders {border:0px;border-style:none}
+
+table.nocellborder {border:0px;border-style:none;border-collapse:collapse}
+table.nocellborder tr td {border:0px;border-style:none}
+
+table.collapse {border-collapse:collapse}
+
+table.border {border:1px solid black;border-collapse:collapse}
+table.border td,
+table.border th {border:1px solid black}
+
+
+table.borderlight,
+table tr td.borderlight,
+table.borderlight caption  {border:1px solid silver;border-collapse:collapse}
+
+
+TABLE.seprows td {border-style:solid;border-width:2px 0px 2px 0px;border-color:white}
+
+TABLE.fracTBL  {display:inline-table;border-spacing:0px;border-collapse:collapse;
+  white-space:pre;vertical-align:middle}
+TABLE.fracTBL tr.vmid,
+TABLE.fracTBL tr td.vmid {text-align:center;vertical-align:middle;padding:0 0.2em;white-space:pre}
+TABLE.fracTBL tr td {text-align:center;vertical-align:middle; }
+TABLE.fracTBL tr td.tall {text-align:center;vertical-align:bottom; padding-top:3px;font-size:inherit}
+TABLE.fracTBL tr td.top,
+TABLE.fracTBL tr td.num {border-bottom:1px solid currentColor;  text-align:center;padding:0 0.2em}
+TABLE.fracTBL tr td.left {text-align:left;vertical-align:middle; padding:0 0.2em} 
+TABLE.fracTBL tr td.den {text-align:center;vertical-align:bottom;padding-top:3px;}
+
+TABLE.fracTBL1  {display:inline-table;border-spacing:5px 0px;}
+TABLE.fracTBL1 td {text-align:center;}
+TABLE.fracTBL1 td.top {border-bottom-width:1px;border-bottom-style: solid;border-color:currentColor;text-align:center;padding-bottom:0px;margin-bottom:0px}
+
+TABLE.fracTBL0  {border-spacing:5px 0px;}
+TABLE.fracTBL0 td {text-align:center;}
+TABLE.fracTBL0 td.top {border-bottom-width:1px;border-bottom-style: solid;border-color:currentColor;text-align:center;padding-bottom:0px;margin-bottom:0px}
+
+TABLE.fracTBLf  {display:inline-table;padding:5px 0px;color:mediumseagreen;font-size:85%;
+    vertical-align:baseline;white-space:pre}
+TABLE.fracTBLf td {text-align:center;}
+TABLE.fracTBLf td.top {border-bottom-width:1px;border-bottom-style: solid;border-color:currentColor;text-align:center;padding-bottom:0px;margin-bottom:0px}
+
+TABLE tr td.borderR,
+TABLE th.borderR {border-right:1px solid silver}
+TABLE tr.urow {border-bottom-width:1px;border-bottom-style: solid;border-color:black}
+TABLE.thborderR tr th {border-right:1px solid silver;padding-right:3px}
+
+TABLE TR.hilite {background-color:#FC3}
+TABLE TR.lolite {color:silver}
+
+TABLE.matrix {border-collapse:separate; border-spacing:3px;
+  border-radius:7px;  /* border-color:inherit;  */
+  border-left-style:solid;border-right-style:solid;
+  border-left-width:2px;border-right-width:2px; 
+  }
+Table.matrix tr td {padding:4px}
+
+TABLE.cellpadded tr td,
+TABLE.cellpadded tr th {padding:2px;border-spacing:2px;border-collapse:separate;}
+
+TABLE.cellpadded6 tr td,
+TABLE.cellpadded6 tr th {padding:6px;}
+
+TABLE.padwide3 tr td {padding:1px 3px}
+
+TABLE.right,
+TABLE.right th,
+TABLE.right td {text-align:right}
+TABLE.left,
+TABLE.left th,
+TABLE.left td {text-align:left;}
+TABLE.mono {font-family:Courier,monospace;}
+TABLE.ref {text-align:left;}
+
+TABLE.nopadding,
+TABLE.nopadding tr,
+TABLE.nopadding th,
+TABLE.nopadding tr td,
+TABLE tr td.nopadding
+   {border:0px;border-spacing:0px;border-collapse:collapse;padding:0px;margin:0px;}
+
+TABLE.cellpadding5 tr td {padding:5px}
+TABLE.cellpaddingH3 tr td {padding:1px 3px}
+TABLE.cellpaddR3 tr td{padding-right:3px}
+
+.astable {display:table}
+  
+.ttdtitle {color:#693;background-color:#CFC; /* #CFC; */
+           font-family:Helvetica,Arial,'Lucida Grande','Trebuchet MS','Comic Sans MS',sans-serif;
+           padding:3px 3px 0px 3px;margin:1em 0 0 0 }
+.ttdbgB {background-color:white;}
+
+.ttd  {background-color:mintcream; /* #F5FFFA; */
+       border:2px solid #BFB;
+       padding:0.5em ; /* line-height:120%; */
+       font-family:Helvetica,Arial,'Lucida Grande','Trebuchet MS','Comic Sans MS',sans-serif;
+      } 
+.ttd OL {list-style-type:decimal; border:0px;padding-left:1.5em;}
+.ttd OL LI {margin:0 0 0.5em 0;padding-left:0.5em;}
+.ttd OL LI OL {margin:0px;padding-left:1em;list-style-type:lower-latin}
+.ttd OL LI OL LI OL {list-style-type:lower-roman}
+UL.ttd LI  {text-align:left;background-color:#FD9;font-weight:normal;margin:0px 0% 8px 0%;}
+A.ttd:link {color:#930}
+A.ttd:active {color:#F93}
+A.ttd:visited {color:#C33}
+A.ttd:hover {color:#963}  /*MUST be LAST! */
+
+.ttdH  {background-color: #CFC; 
+           font-family:Helvetica,Arial,'Lucida Grande','Trebuchet MS','Comic Sans MS',sans-serif;
+           margin:5px 0px 0px 0px;padding:5px 0 2px 0; color:#693; }
+.ttdH:after { content:url('images/ttdIcon.gif');}
+      
+DIV.bibliokey {margin-left:auto;margin-right:auto;display:table}
+UL.bibliokey       {list-style:none;margin:0px 0px 3px -1em;background-color:#f7f7f7;padding-bottom:3px;
+               border:1px solid silver}
+UL.bibliokey:before{color:#C00; font-weight:bolder; content:"Key"}
+UL.biblionotitle       {background-color:#f9f9f9;padding-bottom:12px;margin-bottom:12px;border:1px solid silver;list-style:none;}
+
+UL.biblio       {background-color:#f8f8f8;padding-bottom:12px;margin-bottom:12px;border:1px solid #e8e8e8}
+UL.biblio:before{color:#C66; font-weight:bolder; content:"References"}
+
+UL LI.bibliotitle  {color:#C66;font-weight:bolder;background-color:#f8f8f8;}
+/* use <ul class=biblionotitle><li class-bibliotitle>...</li> */
+
+UL.bibliokey LI.book,
+UL.biblionotitle  LI.book,
+UL.biblio LI.book {list-style:none;}    /* relative to THIS global.css CSS file!!! */
+UL.bibliokey LI.book:before,
+UL.biblionotitle LI.book:before,
+UL.biblio LI.book:before     {content:''; display:inline-block;width:22px;height:21px;margin-left:-27px;
+   background:url(images/book.gif) bottom no-repeat;background-size:contain;}
+   
+UL.biblio LI.none {list-style:none}
+UL.biblio LI.none:before {list-style-image:url(images/empty.gif);margin:0px 0px 3px 0px;} 
+
+UL.bibliokey LI.paper,UL.bibliokey LI.article,
+UL.biblio LI.paper, UL.biblio LI.article  {list-style:none;} 
+UL.bibliokey LI.paper:before, UL.bibliokey LI.article:before, UL.biblio LI.paper:before,
+UL.biblio LI.article:before  {content:''; display:inline-block;width:22px;height:21px;margin-left:-27px;
+   background:url(images/paper.gif)  bottom no-repeat;background-size:contain;}
+
+UL.bibliokey LI.link, UL.biblio LI.link {list-style:none;}
+UL.bibliokey LI.link:before, UL.biblio LI.link:before     {content:''; display:inline-block;width:22px;height:21px;margin-left:-27px;
+   background:url(images/click3.gif) bottom no-repeat;background-size:contain;}
+   
+UL.biblio LI.calc {list-style-image:url(images/calc.gif);margin:0px 0px 3px 0px;}
+UL.biblio LI.disc,
+UL.biblio LI.dvd,
+UL.biblio LI.cd   {list-style-image:url(images/cd.gif);margin:0px 0px 3px 0px;}
+/* UL.biblio LI.none {list-style-image:url(images/empty.gif);margin:0px 0px 3px 0px;} */
+UL.biblio LI.star {list-style:none;margin:0px 0px 3px -1em;}
+UL.biblio LI.star:before {content:" * "}
+UL.biblio LI.fq {list-style:none;}
+UL.biblio LI.fq:before {margin:0px 0px 3px -1.5em;content:"FQ"}
+
+UL.redbead  {list-style-image:url(images/beadred1.gif)}   /*RELATIVE TO THIS FILE!! */
+UL.cyanbead,
+UL.jadebead {list-style-image:url(images/beadjade.gif)}
+UL.bluebead {list-style-image:url(images/beadblue1.gif)}
+UL.greenbead {list-style-image:url(images/beadgreen.gif)}
+UL.emeraldbead {list-style-image:url(images/beademerald.gif)}
+UL.limebead {list-style-image:url(images/beadgreen1.gif)}
+UL.goldbead {list-style-image:url(images/beadgold.gif)}
+UL.pearlbead {list-style-image:url(images/beadpearl.gif)}
+UL.purplebead {list-style-image:url(images/beadpurple.gif)}
+UL.ulsquare {list-style:square}
+UL.ulcircle {list-style:circle}
+UL.uldisc   {list-style:disc}
+
+DL.defn DT:after {content:":"}
+DL.defn DT {font-weight:bolder; color:forestgreen}
+DL.defn DD {color:darkcyan}
+
+.orangebg {background-color:#FC6;}
+.F99bg {background-color:#F99;}
+.brownbg  {background-color:#C60;}
+.yellowbg {background-color:#FF0;}
+.lemonbg  {background-color:#FF6;}
+.redbg {background-color:red;}
+.whitebg {background-color:#FFF;}
+.greybg {background-color:#CCC;}
+.blackbg {background-color:black}
+.transpbg {background-color:inherit; font-family:inherit;font-size:inherit}
+
+.cfPER {color:red;font-weight:bolder;}
+
+.qq {color:#E80;}  /* QUick Question */
+.qq0 {color:#E80;font-size:120%;font-weight:bolder}  /*First word or Can You... to start question*/
+
+.question {text-align:center;color:#309;font-style:italic;margin-bottom:10pt;margin-top:10pt;}
+.def {color:#936;margin-bottom:14pt;margin-top:14pt;margin-left:20px;}
+
+
+
+.outline {border:1px solid #CC0 ;}
+.outlineB {border:1px solid black}
+.quote {font-family:"Lucida Grande",Arial,sans-serif;color:#C36;}
+.footnote {font-family:"Lucida Grande",Arial,sans-serif;font-size:smaller;}
+.shade {background-color:#CCC; padding:10px;margin:10px;}
+.border{border:2px solid gray;padding:3px 3px 3px 3px;}
+
+
+      
+.right {text-align:right;}
+.left {text-align:left;}
+.top {vertical-align:top}
+.middle {vertical-align:middle}
+.bottom {vertical-align:bottom}
+
+.hr {background-color:#990;height:1px}
+.small {font-size:smaller;}
+.vsmall {font-size:30%}
+.dim {color:#999;}
+.pale {color:#CCC;}
+.mono {font-family:monospace;}
+.monoall {font-family:Verdana,Arial,Monaco,monospace;}
+
+
+TABLE.nav   {background-color:#CCC;border:1px solid;
+        font-family:Verdana,'Trebuchet MS', Lucida, Arial, Helvetica, sans-serif;}
+.wtn /* What Now para */
+     {background-color:white;color:#C36;font-weight:bolder;text-align:center;}
+SPAN.havetitle {border-bottom:2px double silver}
+
+.icanhide {position:relative;visibility:hidden;}
+.icanhideSHOW {position:relative;visibility:visible}
+.invisible {visibility:hidden}
+
+
+/* SPAN.emale:before {content:"enquiry @ ron"; color:blue;margin-left:2em;white-space:pre}
+   SPAN.emale:after {content:"knott . com";color:blue;white-space:pre;margin-right:2em}  */
+
+.contentsCalc {list-style-image:url(images/calcicon.gif);list-style-type:circle;
+   font-size:95%;color:#666;font-style:italic;}
+   
+.divsq {position:absolute;border:1px solid black; text-align:center;} 
+   /* divsq for jigsaw squares for CF -- must be inside a position:relative DIV  -- then IN the div can use....*/
+.divsqlabel  {font-family:Verdana,Trebucket,Courier,sans-serif;position:absolute;top:50%;left:50%;margin-right:-50%;transform:translate(-50%,-50%)}
+.divsqsz {font-size:40%;font-style:italic}
+
+.rod1 {background-color:red}
+.rod2 {background-color:gold}
+.rod3 {background-color:blue;color:white}
+.rod4 {background-color:lime}
+.rod5 {background-color:magenta;color:white}
+.rod6 {background-color:cyan}
+.rod7 {background-color:silver}
