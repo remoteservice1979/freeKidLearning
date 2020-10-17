@@ -1,5 +1,5 @@
 function mathtutor($scope) {
-    $scope.gametitle = "MathTutor";
+    $scope.gametitle = "Coding Star MathTutor";
     $scope.maxNumber = 11;
     $scope.n1 = 0;
     $scope.n2 = 0;
