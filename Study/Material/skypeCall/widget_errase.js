@@ -21,7 +21,7 @@
         isPencil: false,
         isMarker: true,
         isEraser: false,
-        isFullEraser: true,
+        isClear: false,
         isText: false,
         isImage: false,
         isPdf: false,
@@ -29,7 +29,7 @@
         set: function(shape) {
             var cache = this;
 
-            cache.isLine = cache.isArrow = cache.isArc = cache.isDragLastPath = cache.isDragAllPaths = cache.isRectangle = cache.isQuadraticCurve = cache.isBezierCurve = cache.isPencil = cache.isMarker = cache.isEraser = cache.isFullEraser = cache.isText = cache.isImage = cache.isPdf = false;
+            cache.isLine = cache.isArrow = cache.isArc = cache.isDragLastPath = cache.isDragAllPaths = cache.isRectangle = cache.isQuadraticCurve = cache.isBezierCurve = cache.isPencil = cache.isMarker = cache.isEraser = cache.isClear = cache.isText = cache.isImage = cache.isPdf = false;
             cache['is' + shape] = true;
         }
     };
@@ -3807,7 +3807,7 @@
         else if (cache.isDragLastPath || cache.isDragAllPaths) dragHelper.mousedown(e);
         else if (cache.isPencil) pencilHandler.mousedown(e);
         else if (cache.isEraser) eraserHandler.mousedown(e);
-        else if (cache.isFullEraser) fullEraserHandler.mousedown();
+        else if (cache.isClear) eraserHandler.mousedown();
         else if (cache.isText) textHandler.mousedown(e);
         else if (cache.isImage) imageHandler.mousedown(e);
         else if (cache.isPdf) pdfHandler.mousedown(e);
@@ -3857,7 +3857,7 @@
         else if (cache.isDragLastPath || cache.isDragAllPaths) dragHelper.mouseup(e);
         else if (cache.isPencil) pencilHandler.mouseup(e);
         else if (cache.isEraser) eraserHandler.mouseup(e);
-        else if (cache.isFullEraser) fullEraserHandler.mouseup(e);
+        else if (cache.isClear) eraserHandler.mouseup(e);
         else if (cache.isText) textHandler.mouseup(e);
         else if (cache.isImage) imageHandler.mouseup(e);
         else if (cache.isPdf) pdfHandler.mousedown(e);
@@ -3887,7 +3887,7 @@
         else if (cache.isDragLastPath || cache.isDragAllPaths) dragHelper.mousemove(e);
         else if (cache.isPencil) pencilHandler.mousemove(e);
         else if (cache.isEraser) eraserHandler.mousemove(e);
-        else if (cache.isFullEraser) fullEraserHandler.mousemove(e);
+        else if (cache.isClear) eraserHandler.mousemove(e);
         else if (cache.isText) textHandler.mousemove(e);
         else if (cache.isImage) imageHandler.mousemove(e);
         else if (cache.isPdf) pdfHandler.mousedown(e);
