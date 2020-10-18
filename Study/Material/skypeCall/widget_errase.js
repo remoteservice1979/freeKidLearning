@@ -3808,7 +3808,7 @@
         else if (cache.isDragLastPath || cache.isDragAllPaths) dragHelper.mousedown(e);
         else if (cache.isPencil) pencilHandler.mousedown(e);
         else if (cache.isEraser) eraserHandler.mousedown(e);
-        else if (cache.isClear) eraserHandler.mousedown();
+        else if (cache.isClear) eraserHandler.mousedown(e);
         else if (cache.isText) textHandler.mousedown(e);
         else if (cache.isImage) imageHandler.mousedown(e);
         else if (cache.isPdf) pdfHandler.mousedown(e);
