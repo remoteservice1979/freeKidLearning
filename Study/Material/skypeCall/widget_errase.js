@@ -21,7 +21,7 @@
         isPencil: false,
         isMarker: true,
         isEraser: false,
-        isFullEraser: false,
+        isFullEraser: true,
         isText: false,
         isImage: false,
         isPdf: false,
