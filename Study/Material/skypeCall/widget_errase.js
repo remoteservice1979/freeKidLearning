@@ -3390,7 +3390,7 @@
             image.src = data_uris.eraser;
         }
         function decorateFullEraser() {
-            var context = getContext('full-eraser');
+            var context = getContext('fullErase-icon');
 
             var image = new Image();
             image.onload = function() {
@@ -3405,9 +3405,9 @@
             document.getElementById('eraser-icon').style.display = 'block';
         }
 
-        if (tools.full_eraser === true) {
+        if (tools.fulleraser === true) {
             decorateFullEraser();
-            document.getElementById('full-eraser').style.display = 'block';
+            document.getElementById('fullErase-icon').style.display = 'block';
         }
         function decorateText() {
             var context = getContext('text-icon');
