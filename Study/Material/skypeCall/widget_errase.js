@@ -1791,7 +1791,49 @@
     markerDrawHelper.getOptions = function() {
         return [markerLineWidth, markerStrokeStyle, fillStyle, markerGlobalAlpha, globalCompositeOperation, lineCap, lineJoin, font];
     }
+    var fullEraserHandler ={
+      ismousedown: false,
+      prevX: 0,
+      prevY: 0,
+      mousedown: function(e) {
+          var x = e.pageX - canvas.offsetLeft,
+              y = e.pageY - canvas.offsetTop;
 
+          var t = this;
+
+          t.prevX = x;
+          t.prevY = y;
+
+          t.ismousedown = true;
+
+          tempContext.lineCap = 'round';
+          drawHelper.line(tempContext, [t.prevX, t.prevY, x, y]);
+
+          points[points.length] = ['line', [t.prevX, t.prevY, x, y], drawHelper.getOptions()];
+
+          t.prevX = x;
+          t.prevY = y;
+      },
+      mouseup: function(e) {
+          this.ismousedown = false;
+      },
+      mousemove: function(e) {
+          var x = e.pageX - canvas.offsetLeft,
+              y = e.pageY - canvas.offsetTop;
+
+          var t = this;
+
+          if (t.ismousedown) {
+              tempContext.lineCap = 'round';
+              drawHelper.line(tempContext, [t.prevX, t.prevY, x, y]);
+
+              points[points.length] = ['line', [t.prevX, t.prevY, x, y], drawHelper.getOptions()];
+
+              t.prevX = x;
+              t.prevY = y;
+          }
+      }
+    };
     var eraserHandler = {
         ismousedown: false,
         prevX: 0,
@@ -3765,7 +3807,7 @@
         else if (cache.isDragLastPath || cache.isDragAllPaths) dragHelper.mousedown(e);
         else if (cache.isPencil) pencilHandler.mousedown(e);
         else if (cache.isEraser) eraserHandler.mousedown(e);
-        else if (cache.isFullEraser) decorateFullEraser();
+        else if (cache.isFullEraser) fullEraserHandler.mousedown();
         else if (cache.isText) textHandler.mousedown(e);
         else if (cache.isImage) imageHandler.mousedown(e);
         else if (cache.isPdf) pdfHandler.mousedown(e);
@@ -3815,7 +3857,7 @@
         else if (cache.isDragLastPath || cache.isDragAllPaths) dragHelper.mouseup(e);
         else if (cache.isPencil) pencilHandler.mouseup(e);
         else if (cache.isEraser) eraserHandler.mouseup(e);
-        else if (cache.isFullEraser) decorateFullEraser();
+        else if (cache.isFullEraser) fullEraserHandler.mouseup(e);
         else if (cache.isText) textHandler.mouseup(e);
         else if (cache.isImage) imageHandler.mouseup(e);
         else if (cache.isPdf) pdfHandler.mousedown(e);
