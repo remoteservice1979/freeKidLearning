@@ -60,6 +60,9 @@
     <script src="end.js"></script>
      <script>
       const userInfo = JSON.parse(localStorage.getItem('UserText')) || [];
+       const scr = localStorage.getItem('mostRecentScore') || 0};
+       
+       document.getElementById("finalScore").value = src;
       document.getElementById("username").value = userInfo.name;
        document.getElementById("phone").value = userInfo.phone;
         document.getElementById("email").value = userInfo.email;
