@@ -34,8 +34,8 @@
     </div>
     <script src="end.js"></script>
      <script>
-      const highScores = JSON.parse(localStorage.getItem('UserText')) || [];
-      document.getElementById("username").value = highScores.name;
+      const userInfo = JSON.parse(localStorage.getItem('UserText')) || [];
+      document.getElementById("username").value = userInfo.name;
     </script>
   </body>
 </html>
