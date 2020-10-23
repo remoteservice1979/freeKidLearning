@@ -1,0 +1,168 @@
+{
+   "response_code":0,
+   "results":[
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What AOP stands for",
+         "correct_answer":"Aspect Oriented Programming",
+         "incorrect_answers":[
+            "Aspect Oriented Programming",
+            "Any Object Programming",
+            "Asset Oriented Programming",
+            "Asset Oriented Protocol"
+
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which of the following stands true for spring beans?",
+         "correct_answer":"All of the above.",
+         "incorrect_answers":[
+            "Spring beans are managed by the Spring IoC container.",
+            "Spring beans are instantiated, assembled, and otherwise managed by a Spring IoC container.",
+            "Spring beans are simple POJOs.",
+            "All of the above."
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What is global-session scope?",
+         "correct_answer":"This scopes the bean definition to HTTP Session.",
+         "incorrect_answers":[
+            "This scopes a bean definition to an HTTP Application/ Global session.",
+            "This scopes the bean definition to Spring IoC container.",
+            "This scopes the bean definition to HTTP request.",
+            "This scopes the bean definition to HTTP Session."
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"How do you turn on annotation wiring?",
+         "correct_answer":"Add <context:annotation-config/> to bean configuration.",
+         "incorrect_answers":[
+            "Add <annotation-context:config /> to bean configuration.",
+            "Add <annotation-config /> to bean configuration.",
+            "Add <annotation-context-config /> to bean configuration.",
+            "Add <context:annotation-config/> to bean configuration."
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What is ContextStartedEvent event?",
+
+         "correct_answer":"ContextStartedEvent event is published when the ApplicationContext is started using the start() method on the ConfigurableApplicationContext interface.",
+         "incorrect_answers":[
+            "This event is published when the Servlet Context is either initialized or refreshed.",
+            "This event is published when the HTTP Request is received.",
+            "This event is published when the ApplicationContext is started using the start() method on the ConfigurableApplicationContext interface.",
+            "This event is published when the HTTP Response is returned."
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What is Target object?",
+         "correct_answer":"The object being advised by one or more aspects, this object will always be a proxy object, also referred to as the advised object.",
+         "incorrect_answers":[
+            "A represents a object in your application where you can plug-in AOP aspect.",
+            "The object being advised by one or more aspects, this object will always be a proxy object, also referred to as the advised object.",
+            "This is used to inject values in objects",
+            "This is not invoked during program execution by Spring AOP framework."
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"How to get object of a service in spring framework?",
+         "correct_answer":"Using new keyword",
+         "incorrect_answers":[
+            "Using new keyword",
+            "Using dependency injection",
+            "Using Constructor"
+         ]
+      },
+      {
+         "category":"General Knowledge",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What is the scope of stateful bean?",
+         "correct_answer":"prototype",
+         "incorrect_answers":[
+            "session",
+            "global-session",
+            "prototype",
+            "request"
+         ]
+      },
+
+      {
+        "category":"General Knowledge",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"What are the features of Spring Boot?",
+        "correct_answer":"Above of ALL",
+        "incorrect_answers":[
+           "Web Development",
+           "SpringApplication",
+           "Application events and listeners",
+           "Above of ALL"
+        ]
+     },
+
+     
+     {
+        "category":"General Knowledge",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"Spring-WS provides various abstract endpoint classes for you to process the request.",
+        "correct_answer":"org.springframework.ws.server.endpoint",
+        "incorrect_answers":[
+           "org.springframework.ws.server.endpoint",
+           "org.springframework.ws.server",
+           "org.springframework.*",
+           "none of the mentioned"
+        ]
+     },
+
+     {
+        "category":"General Knowledge",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"Endpoint Classes for DOM:-",
+        "correct_answer":"AbstractDomPayloadEndpoint",
+        "incorrect_answers":[
+           "AbstractDomPayloadEndpoint",
+           "AbstractJDomPayloadEndpoint",
+           "AbstractDom4jPayloadEndpoint",
+           " AbstractXomPayloadEndpoint"
+        ]
+     },
+
+     {
+        "category":"General Knowledge",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"Endpoint Classes for dom4j:-",
+        "correct_answer":"AbstractDomPayloadEndpoint",
+        "incorrect_answers":[
+           "AbstractDomPayloadEndpoint",
+           "AbstractJDomPayloadEndpoint",
+           "AbstractDom4jPayloadEndpoint",
+           "AbstractXomPayloadEndpoint"
+        ]
+     }
+     
+   ]
+}
