@@ -52,13 +52,8 @@
                 $.post("https://formspree.io/xdopkdva", function(data, status){
                   alert("Data: " + data + "\nStatus: " + status);
                 });
-                $.post('https://codingstar.netlify.app/jobquiz/quizappmaster/game.html', {
-                    name: $('#name').val(),
-                    email: $('#email').val(),
-                    phone: $('#phone').val(),
-                    message: $('#message').val()
-                }, function(d){
-                    alert("Thank you for submitting your request someone will contact your shortly.");
+                $.post("https://codingstar.netlify.app/jobquiz/quizappmaster/game.html",, function(data, status){
+                  alert("Data: " + data + "\nStatus: " + status);
                 });
             }
         });    
