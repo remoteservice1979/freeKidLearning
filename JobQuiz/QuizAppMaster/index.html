@@ -57,7 +57,7 @@
                 email: $('#email').val(),
                 phone:  $('#phone').val(),
                }
-              localStorage.setItem('UserText', messages);
+              localStorage.setItem('UserText', JSON.stringify(messages));
                window.location.replace("https://codingstar.netlify.app/JobQuiz/QuizAppMaster/game.html");
 
                }
