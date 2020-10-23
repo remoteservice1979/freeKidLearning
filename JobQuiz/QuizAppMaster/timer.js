@@ -32,4 +32,4 @@ function timer() {
             intervalSetted = setInterval(timer, 1000);
 }
 
-started(300);
+started(40);
