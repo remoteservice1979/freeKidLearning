@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Congrats!</title>
     <link rel="stylesheet" href="app.css" />
+    <script>
+      const highScores = JSON.parse(localStorage.getItem('UserText')) || [];
+      document.getElementById("username").value = highScores.name;
+    </script>
   </head>
   <body>
     <div class="container">
