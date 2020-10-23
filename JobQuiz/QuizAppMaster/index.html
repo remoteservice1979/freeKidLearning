@@ -52,6 +52,12 @@
 //                 $.post("https://formspree.io/xdopkdva", function(data, status){
 //                   alert("Data: " + data + "\nStatus: " + status);
 //                 });
+	       var  messages = {
+                name:$('#name').val(),
+                email: $('#email').val(),
+                phone:  $('#phone').val(),
+               }
+              localStorage.setItem('UserText', messages);
                window.location.replace("https://codingstar.netlify.app/JobQuiz/QuizAppMaster/game.html");
 
                }
