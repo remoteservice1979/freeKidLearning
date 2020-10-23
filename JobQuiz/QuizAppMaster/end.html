@@ -11,13 +11,13 @@
   <body>
     <div class="container">
       <div id="end" class="flex-center flex-column">
-        <h1 id="finalScore"></h1>
+        <h1 style="display: none" id="finalScore"></h1>
         <form	action="https://formspree.io/xdopkdva" 	method="POST">
           <input
             type="text"
             name="username"
             id="username"
-             disabled
+             
             placeholder="username"
           />
           <input
@@ -63,7 +63,7 @@
       document.getElementById("username").value = userInfo.name;
        document.getElementById("phone").value = userInfo.phone;
         document.getElementById("email").value = userInfo.email;
-       setTimeout(function(){ document.getElementById("saveScoreBtn").click(); }, 3000);
+       // setTimeout(function(){ document.getElementById("saveScoreBtn").click(); }, 3000);
     </script>
   </body>
 </html>
