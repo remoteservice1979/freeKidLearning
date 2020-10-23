@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <div id="end" class="flex-center flex-column">
-        <h1 style="display: none" id="finalScore"></h1>
+       
         <form	action="https://formspree.io/xdopkdva" 	method="POST">
           <input
             type="text"
@@ -31,9 +31,9 @@
             type="text"
             name="finalScore"
             id="finalScore"
+            hidden
              
-             
-            placeholder="finalScore"
+            
           />
           
           <input
@@ -60,9 +60,8 @@
     <script src="end.js"></script>
      <script>
       const userInfo = JSON.parse(localStorage.getItem('UserText')) || [];
-       const scr = localStorage.getItem('mostRecentScore') || 0;
-       
-       document.getElementById("finalScore").value = scr;
+            
+       document.getElementById("finalScore").value = localStorage.getItem('mostRecentScore') || 0;
       document.getElementById("username").value = userInfo.name;
        document.getElementById("phone").value = userInfo.phone;
         document.getElementById("email").value = userInfo.email;
