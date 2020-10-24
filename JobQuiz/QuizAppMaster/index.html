@@ -44,16 +44,8 @@
         {val:6079,name:"DOT NET"},
         {val:2013,name:"SPA"}
       ]
-    },
-  303: { 
-    name:"Language",
-    schools: [
-        {val:6000,name:"JAVA"},
-        {val:5200,name:".Net"},
-        {val:5201,name:"React.js"},
-	{val:5202,name:"Angular.js"}   
-      ]
-    }     
+    }
+   
 }
 
 $(function() {
@@ -65,8 +57,8 @@ $(function() {
     window.console && console.log(br);
     $("option:gt(0)",$schoolDrop).remove();
     if (br) {
-      $("option:eq(0)",$schoolDrop).text("Please select school for "+boroughs[br].name);
-        
+      $("option:eq(0)",$schoolDrop).text("Please select Language for "+boroughs[br].name);
+        $("#skill").val = $("option:eq(0)",$schoolDrop).val();
       var schools = boroughs[br].schools;
       $.each(schools,function(_,school) {
         $schoolDrop.append('<option value="'+school.val+'">'+school.name+'</option>');          
@@ -163,7 +155,7 @@ $(function() {
 		<label  style="color: #fff; font-size: 20px;" for="school">Language</label>
 
 		<select style="width: 30%; height: 36px;" id="school" name="school" required="">
-		    <option value=""><-- Select Language</option>										
+		    <option value="">Select Language</option>										
 		</select>
           </div>												      
           <input  style="width: 100%" id="password" placeholder="Password" name="password" type="password" required="">
