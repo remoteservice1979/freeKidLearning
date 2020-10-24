@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Congrats!</title>
     <link rel="stylesheet" href="app.css" />
+	     <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
    
   </head>
       <style>
@@ -22,7 +28,7 @@
   position: relative;
 }
 	  </style>
-  <body>
+  <body oncontextmenu="return false;" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
     <div class="container">
       <div id="end" class="flex-center flex-column bg-img">
        
