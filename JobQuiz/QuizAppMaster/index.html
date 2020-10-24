@@ -53,7 +53,7 @@ $(function() {
     $('#borough').append('<option value="'+num+'">'+borough.name+'</option>'); 
   }); 
 	 $('#school').on("change",function() {
-		 $("#skill").val = this.value ;
+        	 document.getElementById('skill').value= this.value;
 	 });
   $('#borough').on("change",function() {
     var br = this.value, $schoolDrop=$("#school")
