@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Congrats!</title>
     <link rel="stylesheet" href="app.css" />
-	   <script type="text/javascript">
-        function preventBack() { window.history.forward(); }
-        setTimeout("preventBack()", 0);
-        window.onunload = function () { null };
-    </script>
+	<script>
+		$(document).ready(function() {
+		function disableBack() { window.history.forward() }
+
+		window.onload = disableBack();
+		window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+		});
+	</script>
    
   </head>
       <style>
