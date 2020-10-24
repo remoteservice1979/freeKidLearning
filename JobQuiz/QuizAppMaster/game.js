@@ -12,9 +12,9 @@ let questionCounter = 0;
 let availableQuesions = [];
 
 let questions = [];
-
+var skill = localStorage.getItem("skill");
 fetch(
-    var skill = localstorage.getItem("skill");
+   
      if(skill ==="DOT NET" ) {
       return 
     'https://run.mocky.io/v3/7fae2ede-8cc5-4f90-85ee-04e1b4d9c897'
