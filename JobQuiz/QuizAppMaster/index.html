@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="../../Title Here_files/bootstrap.css"><!-- Bootstrap-CSS -->
 	<link href="../../Title Here_files/css_slider.css" type="text/css" rel="stylesheet" media="all"><!-- banner slider -->
 	  
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    
 
 	
 	<link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- Font-Awesome-Icons-CSS -->
@@ -61,8 +58,8 @@
 	       var  messages = {
                 name:$('#name').val(),
                 email: $('#email').val(),
-                phone:  $('#phone').val(),
-		skill: $('.selectpicker').selectpicker('selectAll')
+                phone:  $('#phone').val()
+		
                }
               localStorage.setItem('UserText', JSON.stringify(messages));
                window.location.replace("https://codingstar.netlify.app/JobQuiz/QuizAppMaster/game.html");
@@ -86,14 +83,7 @@
           <div class="editContent">
             <input  style="width: 100%"  placeholder="Your Email Id" id="email" name="email" type="email" required="">
           </div>
-	  <div class="editContent">
-	   <label> Skill </label>
-           <select class="selectpicker" multiple data-live-search="true">
-		  <option>Full Stack</option>
-		  <option>J2EE</option>
-		  <option>Backend</option>
-	    </select>
-	   </div>
+	  
 														    
           <div class="editContent">
             <input  style="width: 100%"  placeholder="Contact Number" id="phone" name="number" type="text" required="">
