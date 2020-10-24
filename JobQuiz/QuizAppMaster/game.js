@@ -15,13 +15,11 @@ let questions = [];
 var skill = localStorage.getItem("skill");
 fetch(
    
-     if(skill ==="DOT NET" ) {
-      return 
-    'https://run.mocky.io/v3/7fae2ede-8cc5-4f90-85ee-04e1b4d9c897'
-     } else {
-         return
-          'https://run.mocky.io/v3/7fae2ede-8cc5-4f90-85ee-04e1b4d9c897'
-     }
+     skill ==="DOT NET" ? 'https://run.mocky.io/v3/7fae2ede-8cc5-4f90-85ee-04e1b4d9c897' : 'https://run.mocky.io/v3/7fae2ede-8cc5-4f90-85ee-04e1b4d9c897';
+    
+         
+         
+     
 )
     .then((res) => {
         return res.json();
