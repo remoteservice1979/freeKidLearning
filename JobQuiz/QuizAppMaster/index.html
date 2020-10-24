@@ -36,6 +36,47 @@
     <title>ITC Quick Quiz</title>
     <link rel="stylesheet" href="app.css" />
     <script>
+	    var boroughs = {
+  305 : {
+    name:"bro",
+    schools: [
+        {val:2012,name:"test school 1"},
+        {val:6079,name:"test school 2"},
+        {val:2013,name:"test school 3"}
+      ]
+    },
+  303: { 
+    name:"bex",
+    schools: [
+        {val:6000,name:"test school 4"},
+        {val:5200,name:"test school 5"},
+        {val:5201,name:"test school 6"}
+      ]
+    }     
+}
+
+$(function() {
+  $.each(boroughs,function(num,borough) {  
+    $('#borough').append('<option value="'+num+'">'+borough.name+'</option>'); 
+  });      
+  $('#borough').on("change",function() {
+    var br = this.value, $schoolDrop=$("#school")
+    window.console && console.log(br);
+    $("option:gt(0)",$schoolDrop).remove();
+    if (br) {
+      $("option:eq(0)",$schoolDrop).text("Please select school for "+boroughs[br].name);
+        
+      var schools = boroughs[br].schools;
+      $.each(schools,function(_,school) {
+        $schoolDrop.append('<option value="'+school.val+'">'+school.name+'</option>');          
+      });  
+    }    
+    else {
+      $("option:eq(0)",$schoolDrop).text("<-- Select borough first to narrow down");
+      }  
+  });
+});
+    
           $(document).ready(function(){
 
 	    $('.phone').inputmask('999-9999-999');
@@ -112,6 +153,17 @@
           </div>
 	     <div class="editContent">
             <input  style="width: 100%"  placeholder="Skill Detail" id="skill" name="number" type="text" required="">
+	     <label for="borough">FrameWork</label>
+
+		<select id="borough" name="borough">
+		    <option value="">SELECT</option>
+		</select>
+
+		<label for="school">Language</label>
+
+		<select id="school" name="school">
+		    <option value=""><-- Select borough first to narrow down</option>										
+		</select>
           </div>												      
           <input  style="width: 100%" id="password" placeholder="Password" name="password" type="password" required="">
            <button  id="Started" class="btn"> Get Started</button>
