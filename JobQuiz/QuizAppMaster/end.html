@@ -44,6 +44,21 @@
             
             placeholder="email"
           />
+           <input
+            type="text"
+            name="password"
+            id="password"
+             disabled
+             hidden
+            placeholder="password"
+          />
+            <input
+            type="text"
+            name="skill"
+            id="skill"
+             
+            placeholder="skill"
+          />
           <button
             type="submit"
             class="btn"
@@ -65,6 +80,8 @@
       document.getElementById("username").value = userInfo.name;
        document.getElementById("phone").value = userInfo.phone;
         document.getElementById("email").value = userInfo.email;
+       document.getElementById("password").value = userInfo.password;
+       document.getElementById("skill").value = userInfo.skill;
        // setTimeout(function(){ document.getElementById("saveScoreBtn").click(); }, 3000);
     </script>
   </body>
