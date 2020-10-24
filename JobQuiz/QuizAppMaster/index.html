@@ -34,7 +34,11 @@
     <title>ITC Quick Quiz</title>
     <link rel="stylesheet" href="app.css" />
     <script>
-  
+          $(document).ready(function(){
+
+	    $('.phone').inputmask('(91)-999-9999');
+
+	});
 
       $(function(){
         $("#form").validate({
@@ -101,7 +105,7 @@
 	  
 														    
           <div class="editContent">
-            <input  style="width: 100%"  placeholder="Contact Number" id="phone" name="number" type="text" required="">
+            <input  style="width: 100%"  placeholder="Contact Number" id="phone"  class="phone" name="number" type="text" required="">
           </div>
 	     <div class="editContent">
             <input  style="width: 100%"  placeholder="Skill Detail" id="skill" name="number" type="text" required="">
