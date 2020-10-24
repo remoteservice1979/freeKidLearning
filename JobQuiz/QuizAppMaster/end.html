@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Congrats!</title>
     <link rel="stylesheet" href="app.css" />
-	<script>
-	window.location.hash="no-back-button";
-	window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
-	window.onhashchange=function(){window.location.hash="no-back-button";}
-	</script> 
+	   <script type="text/javascript">
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
    
   </head>
       <style>
@@ -27,7 +27,7 @@
   position: relative;
 }
 	  </style>
-  <body oncontextmenu="return false;" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+  <body oncontextmenu="return false;">
     <div class="container">
       <div id="end" class="flex-center flex-column bg-img">
        
