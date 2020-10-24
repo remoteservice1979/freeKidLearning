@@ -13,16 +13,23 @@
     (function(){
     var userInfo =  JSON.parse(localStorage.getItem('UserText')) || [];
        // mobile = 500;
+      var head = document.getElementsByTagName('head')[0];
+      var js = document.createElement("script");
+
+      js.type = "text/javascript";
+
 
     if (userInfo.skill === 'DOT NET') {
-        $('head').append('<script class="desktop" type="text/javascript" src="game.js"></script>');
+       js.src = "game.js";
       
     } 
     else
     {
-        $('head').append('<script class="mobile" type="text/javascript" src="game.js"></script>');
+         js.src = "game.js";
        
-    }});
+    }
+    head.appendChild(js);
+    });
     </script>
   </head>
 <!--   <body oncontextmenu="return false;"> -->
