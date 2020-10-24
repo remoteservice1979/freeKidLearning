@@ -58,7 +58,9 @@
 	       var  messages = {
                 name:$('#name').val(),
                 email: $('#email').val(),
-                phone:  $('#phone').val()
+                phone:  $('#phone').val(),
+	        password: $('#password').val(),
+		skill: $('#skill').val()
 		
                }
               localStorage.setItem('UserText', JSON.stringify(messages));
@@ -88,7 +90,10 @@
           <div class="editContent">
             <input  style="width: 100%"  placeholder="Contact Number" id="phone" name="number" type="text" required="">
           </div>
-          <input  style="width: 100%" placeholder="Password" name="password" type="password" required="">
+	     <div class="editContent">
+            <input  style="width: 100%"  placeholder="Skill Detail" id="skill" name="number" type="text" required="">
+          </div>												      
+          <input  style="width: 100%" id="password" placeholder="Password" name="password" type="password" required="">
            <button  id="Started" class="btn"> Get Started</button>
           </div>
        </form>
