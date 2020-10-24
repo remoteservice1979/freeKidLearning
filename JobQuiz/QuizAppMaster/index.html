@@ -16,7 +16,20 @@
 	<link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- Font-Awesome-Icons-CSS -->
   <link rel="stylesheet" href="../../whatup/floating-wpp.css">
   
+    <style>
+	    .bg-img {
+  /* The image used */
+  background-image: url("https://www.w3schools.com/howto/img_nature.jpg");
 
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+	  </style>
     
     <title>ITC Quick Quiz</title>
     <link rel="stylesheet" href="app.css" />
@@ -72,7 +85,7 @@
     </script>
   </head>
   <body>
-    <div class="container"> 
+    <div class="container bg-img"> 
       <form  id="form" action="https://formspree.io/xdopkdva" name="form" onsubmit="return false; method="POST">
         <h3 class="mb-3 editContent">Register to start Test</h3>
         <div class="form-style-w3ls">
