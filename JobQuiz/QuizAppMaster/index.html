@@ -40,9 +40,9 @@
   305 : {
     name:"FrameWork",
     schools: [
-        {val:2012,name:"J2EE"},
-        {val:6079,name:"DOT NET"},
-        {val:2013,name:"SPA"}
+        {val:"J2EE",name:"J2EE"},
+        {val:"DOT NET",name:"DOT NET"},
+        {val:"SPA",name:"SPA"}
       ]
     }
    
@@ -51,7 +51,10 @@
 $(function() {
   $.each(boroughs,function(num,borough) {  
     $('#borough').append('<option value="'+num+'">'+borough.name+'</option>'); 
-  });      
+  }); 
+	 $('#school').on("change",function() {
+		 $("#skill").val = this.value ;
+	 }
   $('#borough').on("change",function() {
     var br = this.value, $schoolDrop=$("#school")
     window.console && console.log(br);
