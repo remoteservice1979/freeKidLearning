@@ -19,6 +19,7 @@
   <script src="https://rtcmulticonnection.herokuapp.com/demos/js/bootstrap.min.js"></script>
   <script src="https://rtcmulticonnection.herokuapp.com/socket.io/socket.io.js"></script>
   <script src="https://rtcmulticonnection.herokuapp.com/dist/RTCMultiConnection.min.js"></script>
+	
 
 <style type="text/css">
 html, body, section, ul, li, nav, a, h1, h2 {
@@ -330,6 +331,8 @@ input[disabled], button[disabled] {
 <body>
   <header style="margin-bottom: 20px;">
     <img class="logo" src="../../../logo.jpeg" alt="RTCMultiConnection" /> <span class="logo-text">Kid's Dashboard</span>
+    <video id="gum-local" autoplay playsinline muted></video>
+	    <button id="startButton" disabled>Start</button>
 	   <a href="https://codingstar.netlify.app/study/material/" class="btn btn-primary" data-toggle="modal" data-target="#startRoomModel">Back</a>
 	  <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ladder Flow
@@ -814,5 +817,8 @@ if (localStorage.getItem('canvas-designer-user-full-name')) {
     $('#txt-user-name-hidden').val(userFullName.value);
 }
 </script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="https://webrtc.github.io/samples/src/content/getusermedia/getdisplaymedia/js/main.js"> </script>
+	<script src="https://webrtc.github.io/samples/src/js/lib/ga.js"></script>
 </body>
 </html>
