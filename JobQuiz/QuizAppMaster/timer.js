@@ -21,7 +21,9 @@ function timer() {
                 $('#progress').animate({
                     width: progresBarWidth + 'px'
                 }, 1000);
-
+                 if(progresBarWidth < 0) {
+                  window.location.replace ="https://codingstar.netlify.app/jobquiz/quizappmaster/end.html";
+                 }
                 if (diff <= 0) {
                     clearInterval(intervalSetted);
                    window.location.replace ="https://codingstar.netlify.app/jobquiz/quizappmaster/end.html";
