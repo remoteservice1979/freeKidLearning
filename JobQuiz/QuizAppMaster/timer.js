@@ -22,7 +22,7 @@ function timer() {
                     width: progresBarWidth + 'px'
                 }, 1000);
                  if(seconds === "0-1" || seconds == "00" ) {
-                  window.location.replace ="https://codingstar.netlify.app/jobquiz/quizappmaster/end.html";
+                  window.location.href ="https://codingstar.netlify.app/jobquiz/quizappmaster/end.html";
                  }
                 if (diff <= 0) {
                     clearInterval(intervalSetted);
