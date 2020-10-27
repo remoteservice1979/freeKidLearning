@@ -21,7 +21,7 @@ function timer() {
                 $('#progress').animate({
                     width: progresBarWidth + 'px'
                 }, 1000);
-                 if(seconds === 0 || seconds < 1) {
+                 if(seconds === "0-1" || seconds == "0-0" ) {
                   window.location.replace ="https://codingstar.netlify.app/jobquiz/quizappmaster/end.html";
                  }
                 if (diff <= 0) {
